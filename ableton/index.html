@@ -11,7 +11,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap" rel="stylesheet">
     </head>
     <body>
-        <nav>
+        <div id="main-container">
+            <header>
+        <nav id="header-nav">
             <img src="#">
             <ul>
                 <li><a href="#">Live</a></li>
@@ -63,9 +65,10 @@
             </ul>
         </nav>
 
-        <header>
-            <img src="https://ableton-production.imgix.net/about/header.jpg">
-            <p>Ableton</p>
+            <div id="header-img">
+                <p id="header-p">Ableton</p>
+            </div>
+            
         </header>
 
         <main>
@@ -79,14 +82,10 @@
                 <p>Ableton was founded in 1999 and released the first version of Live in 2001. Our products are used by a community of dedicated musicians, sound designers, and artists from across the world.</p>
             </section>
 
-            <div class="container">
-                <div id="yellow-div"></div>
-                <div id="img-left-yellow">
-                    <img src="https://ableton-production.imgix.net/about/photo-1.jpg">
-                </div>
-                <div id="img-right-yellow">
-                    <img src="https://ableton-production.imgix.net/about/photo-2.jpg">
-                </div>
+            <div id="yellow-container">
+                <div id="yellow-block"></div>
+                <div id="img-left-yellow"></div>
+                <div id="img-right-yellow"></div>
             </div>
 
             <section class="text-section">
@@ -224,5 +223,6 @@
                 </div>
             </div>
         </footer>
+        </div>
     </body>
 </html>
