@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
-    <title>Learn more about Ableton - maker of Live and Push | Ableton</title>
+    <title>Title | Company</title>
     <link href="assets/css/style.css" rel="stylesheet" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap" rel="stylesheet">
@@ -15,83 +14,107 @@
 <body>
     <div id="main-container">
         <header>
-
             <div id="top-nav-container">
                 <div id="logo-top-nav">
                     <div id="text-logo-top-nav" title="Company Homepage"><a href="#">Company</a></div>
                 </div>
 
+                <script type="text/javascript">
+                    function toggle_div(id) {
+                        var hidden_nav = document.getElementById(id);
+
+                        if (hidden_nav.style.display == "block")
+                            hidden_nav.style.display = "none";
+                        else
+                            hidden_nav.style.display = "block";
+                    }
+                </script>
+
+                <!-- NAV top left -->
                 <nav id="left-top-nav">
                     <ul>
-                        <li><a href="#">Live</a></li>
-                        <li><a href="#">Push</a></li>
-                        <li><a href="#">Note</a></li>
-                        <li><a href="#">Link</a></li>
-                        <li><a href="#">Shop</a></li>
-                        <li><a href="#">Packs</a></li>
-                        <li><a href="#">Help</a></li>
-                        <li><a href="#" class="orange-font">More +</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Page</a></li>
+                        <li><a href="#">Page</a></li>
+                        <li><a href="#">Page</a></li>
+                        <li><button><a href="#" onclick="javascript:toggle_div('hidden-nav-container')"
+                                    class="orange-font">More </a></button></li>
                     </ul>
                 </nav>
+                <!-- / -->
 
+                <!-- NAV top right -->
                 <nav id="right-top-nav">
                     <ul>
-                        <li><a href="#" class="blue-font">Try Live for free</a></li>
-                        <li class="small-font-header"><a href="#">Log in or register</a></li>
+                        <li><a href="#" class="blue-font">Feature link here</a></li>
+                        <li class="small-font-header"><a href="#">Log in / Register</a></li>
                     </ul>
                 </nav>
+                <!-- / -->
             </div>
 
-            <nav id="hidden-nav-container">
-                <ul>
-                    <li>
-                        <p>More on Ableton.com:</p>
-                    </li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Ableton for the Classroom</a></li>
-                    <li><a href="#">Ableton for Colleges and Universities</a></li>
-                    <li><a href="#">Certified Training</a></li>
-                    <li><a href="#" class="orange-font">About Ableton</a></li>
-                    <li><a href="#">Jobs</a></li>
-                    <li><a href="#">Apprenticeships</a></li>
-                </ul>
+            <!-- NAV hidden -->
+            <div id="hidden-nav-container">
+                <section>
+                    <h2>More nice pages:</h2>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Page</a></li>
+                            <li><a href="#">Another Page</a></li>
+                            <li><a href="#">One More Page</a></li>
+                            <li><a href="#">Another What?</a></li>
+                            <li><a href="#" class="orange-font">This Page</a></li>
+                            <li><a href="#">Another Page</a></li>
+                            <li><a href="#">Only One More Page</a></li><br>
+                        </ul>
+                    </nav>
+                </section>
 
-                <ul>
-                    <li><a href="#">
-                            <p>Loop</p>
-                            <p>Watch Talks, Performances and Features from Ableton's Summit for Music Makers</p>
-                        </a></li>
-                    <li><a href="#">
-                            <p>Learning Music</p>
-                            <p>Learn the fundamentals of music making right in your browser.</p>
-                        </a></li>
-                    <li><a href="#">
-                            <p>Learning Synths</p>
-                            <p>Get started with synthesis using a web-based synth and accompanying lessons.</p>
-                        </a></li>
-                    <li><a href="#">
-                            <p>Making Music</p>
-                            <p>Some tips from 74 Creative Strategies for Electronic Producers.</p>
-                        </a></li>
-                </ul>
-            </nav>
+                <section>
+                    <h2>Even more nice pages:</h2>
+                    <nav id="box-nav">
+                        <ul>
+                            <li><a href="#">
+                                    <p class="a-title">Page</p>
+                                    <p>Description of some really nice page from the Company's website.</p>
+                                </a></li>
+                            <li><a href="#">
+                                    <p class="a-title">Page</p>
+                                    <p>Description of some really nice page from the Company's website.</p>
+                                </a></li>
+                            <li><a href="#">
+                                    <p class="a-title">Page</p>
+                                    <p>Description of some really nice page from the Company's website.</p>
+                                </a></li>
+                            <li><a href="#">
+                                    <p class="a-title">Page</p>
+                                    <p>Description of some really nice page from the Company's website.</p>
+                                </a></li>
+                        </ul>
+                    </nav>
+                </section>
+            </div>
+            <!-- / -->
 
+            <!-- NAV sticky -->
             <nav id="sticky-nav-container" class="small-font-header">
                 <ul>
-                    <li><a href="#" class="orange-font">About</a></li>
-                    <li><a href="#">Jobs</a></li>
-                    <li><a href="#">Apprenticeships</a></li>
+                    <li><a href="#" class="orange-font">This Page</a></li>
+                    <li><a href="#">Page</a></li>
+                    <li><a href="#">Page</a></li>
                 </ul>
             </nav>
+            <!-- / -->
 
             <div id="header-img">
                 <p id="header-p">Company</p>
             </div>
-
         </header>
 
         <main>
-
             <section class="text-section">
                 <h2>We make
                     <a href="#">Live</a>,
@@ -202,80 +225,104 @@
                     </h2>
                 </div>
             </div>
-
         </main>
+
         <footer>
-            <img src="#">
-            <div>
-                <div>
-                    <p>
-                        Sign up to our newsletter
-                    </p>
-                    <p>
-                        Enter your email address to stay up to date with the latest offers, tutorials, downloads,
-                        surveys and more.
-                    </p>
-                    <!-- input sign up -->
-                </div>
-                <div>
+            <div id="logo-top-footer">Company</div>
+
+            <div id="footer-container">
+                <div id="newsletter-footer">
                     <ul>
-                        <li><a href="#">Register Live or Push</a></li>
-                        <li><a href="#">About Ableton</a></li>
-                        <li><a href="#">Jobs</a></li>
-                        <li><a href="#"><img src="#facebook"></a></li>
-                        <li><a href="#"><img src="#twitter"></a></li>
-                        <li><a href="#"><img src="#youtube"></a></li>
-                        <li><a href="#"><img src="#instagram"></a></li>
+                        <li>
+                            <p>
+                                Sign up to our newsletter
+                            </p>
+                        </li>
+                        <li>
+                            <p id="not-bold-text">
+                                Enter your email address to stay up to date with the latest offers, tutorials,
+                                downloads,
+                                surveys and more.
+                            </p>
+                        </li>
+                        <li>
+                            <form><input type="email" id="email" name="email" value="Email Address">
+                                <input id="submit" type="submit" value="Sign up">
+                            </form>
+                        </li>
                     </ul>
                 </div>
-                <div>
+
+                <div id="top-left-footer">
+                    <ul>
+                        <li><a class="arrow-a" href="#">Register Live or Push</a></li>
+                        <li><a class="arrow-a" href="#">About Ableton</a></li>
+                        <li><a class="arrow-a" href="#">Jobs</a></li>
+                    </ul>
+                    <div class="social-media-square"></div>
+                    <div class="social-media-square"></div>
+                    <div class="social-media-square"></div>
+                    <div class="social-media-square"></div>
+                </div>
+
+                <div id="top-middle-footer">
                     <ul>
                         <li>
                             <p>Education</p>
                         </li>
-                        <li><a href="#">Offers for students and teachers</a></li>
-                        <li><a href="#">Ableton for the Classroom</a></li>
-                        <li><a href="#">Ableton for Colleges and Universities</a></li>
+                        <li><a class="arrow-a" href="#">Offers for students and teachers</a></li>
+                        <li><a class="arrow-a" href="#">Ableton for the Classroom</a></li>
+                        <li><a class="arrow-a" href="#">Ableton for Colleges and Universities</a></li>
                     </ul>
                 </div>
-                <div>
+
+                <div id="bottom-left-footer">
                     <ul>
                         <li>
                             <p>Community</p>
                         </li>
-                        <li><a href="#">Find Ableton User Groups</a></li>
-                        <li><a href="#">Find Certified Training</a></li>
-                        <li><a href="#">Become a Certified Trainer</a></li>
+                        <li><a class="arrow-a" href="#">Find Ableton User Groups</a></li>
+                        <li><a class="arrow-a" href="#">Find Certified Training</a></li>
+                        <li><a class="arrow-a" href="#">Become a Certified Trainer</a></li>
                     </ul>
                 </div>
-                <div>
+
+                <div id="bottom-middle-footer">
                     <ul>
                         <li>
                             <p>Distributors</p>
                         </li>
-                        <li><a href="#">Find Distributors</a></li>
-                        <li><a href="#">Try Push in-store</a></li>
+                        <li><a class="arrow-a" href="#">Find Distributors</a></li>
+                        <li><a class="arrow-a" href="#">Try Push in-store</a></li>
                     </ul>
                 </div>
-                <div>
-                    <p>
-                        Language and Location
-                    </p>
-                    <!-- language / country -->
+
+                <div id="language-footer">
+                    <ul>
+                        <li>
+                            <p>
+                                Language and Location
+                            </p>
+                        </li>
+                        <li><input> <input></li>
+                    </ul>
                 </div>
-                <div>
-                    <nav>
-                        <ul>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Press Resources</a></li>
-                            <li><a href="#">Legal Info</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Cookie Settings</a></li>
-                            <li><a href="#">Imprint</a></li>
-                        </ul>
-                    </nav>
-                    <img src="#">
-                </div>
+
+            </div>
+
+            <div id="nav-bottom-footer">
+                <nav>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Press Resources</a></li>
+                        <li><a href="#">Legal Info</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Settings</a></li>
+                        <li><a href="#">Imprint</a></li>
+                    </ul>
+                </nav>
+
+                <div id="logo-bottom-footer">Made in Neverland</div>
             </div>
         </footer>
     </div>
