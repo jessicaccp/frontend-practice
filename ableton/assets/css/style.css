@@ -1,26 +1,24 @@
 :root {
     /* cores originais do projeto */
-    --project-yellow: #fbffa7;
-    --project-blue: #b1c5ff;
-    --project-green: #b6ffc0;
-    --project-orange: #ff764d;
-    --project-purple: #d5b3ff;
-    --project-dark-blue: #0000ff;
+    /* --project-yellow: #fbffa7; */
+    /* --project-blue: #b1c5ff; */
+    /* --project-green: #b6ffc0; */
+    /* --project-orange: #ff764d; */
+    /* --project-purple: #d5b3ff; */
+    /* --project-dark-blue: #0000ff; */
 
-    /* cores neutras */
+    /* cores atuais */
+    --project-yellow: #F9FFBD;
+    --project-blue: #BDE9FF;
+    --project-green: #BDFFCC;
+    --project-purple: #EABDFF;
+    --project-dark-blue: #2E2EFF;
+    --project-orange: #992400;
+
     --white: #ffffff;
     --gray: #f3f3f3;
     --also-gray: #eeeeee;
-    --black: #000000;
-
-    /* cores para testar */
-    --orange: #ff764d;
-    --pink: #efaeaf;
-    --yellow: #e9d28c;
-    --green: #a1d343;
-    --teal: #7eccb4;
-    --lilac: #b2bedc;
-    --blue: #5eb2b5;
+    --black: #333333;
 }
 
 * {
@@ -204,9 +202,10 @@ button a::after {
     margin: 0 8.5%;
     overflow: hidden;
     position: relative;
+    
 }
 
-#header-p {
+#header-h1 {
     color: var(--project-orange);
     font-size: 130px;
     font-weight: bold;
@@ -486,12 +485,9 @@ footer a:hover {
     content: ' \203A';
 }
 
-footer ul p {
+footer h3 {
     font-weight: bold;
-}
-
-#not-bold-text {
-    font-weight: normal;
+    font-size: 18px;
 }
 
 #logo-top-footer {
