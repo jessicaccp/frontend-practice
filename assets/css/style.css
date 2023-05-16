@@ -206,7 +206,7 @@ button a::after {
 
 #header-img {
     /* 5 4 */
-    background-image: url("../img/header1.webp");
+    background-image: url("../img/header4.webp");
     background-size: cover;
     background-position: 50% 50%;
     height: calc(100vh - 137px);
@@ -214,10 +214,10 @@ button a::after {
     overflow: hidden;
     position: relative;   
 }
-
 #header-h1 {
-    color: var(--white);
-    text-shadow: 10px 0 0 var(--project-orange);
+    padding: 0 30px 15px 30px;
+    border: 10px solid var(--project-orange);
+    color: var(--project-orange);
     font-size: 130px;
     font-weight: bold;
     position: absolute;
