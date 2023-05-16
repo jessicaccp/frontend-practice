@@ -1,3 +1,13 @@
+/* todo: */
+/*  - mudanças para telas menores
+    - imagens menores para telas menores
+    - incluir tags dos navegadores
+    - link rel=preload
+    - configurar forms
+    - configurar meta tags
+    - favicon
+    - trocar variveis globais por valores */
+
 :root {
     /* cores originais do projeto */
     /* --project-yellow: #fbffa7; */
@@ -12,7 +22,7 @@
     --project-blue: #BDE9FF;
     --project-green: #BDFFCC;
     --project-purple: #EABDFF;
-    --project-dark-blue: #2E2EFF;
+    --project-dark-blue: #0000F5;
     --project-orange: #992400;
 
     --white: #ffffff;
@@ -195,24 +205,26 @@ button a::after {
 }
 
 #header-img {
-    background-image: url("../img/header3.jpg");
+    /* 5 4 */
+    background-image: url("../img/header1.webp");
     background-size: cover;
     background-position: 50% 50%;
     height: calc(100vh - 137px);
-    margin: 0 8.5%;
+    margin: 0 133.333px;
     overflow: hidden;
-    position: relative;
-    
+    position: relative;   
 }
 
 #header-h1 {
-    color: var(--project-orange);
+    color: var(--white);
+    text-shadow: 10px 0 0 var(--project-orange);
     font-size: 130px;
     font-weight: bold;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 2;
 }
 
 .text-section {
@@ -255,7 +267,7 @@ button a::after {
 }
 
 #img-left-yellow {
-    background-image: url(https://ableton-production.imgix.net/about/photo-1.jpg);
+    background-image: url(../img/yellow1.webp);
     background-size: cover;
     background-position: 50% 50%;
     width: 41%;
@@ -268,7 +280,7 @@ button a::after {
 }
 
 #img-right-yellow {
-    background-image: url(https://ableton-production.imgix.net/about/photo-2.jpg);
+    background-image: url(../img/yellow2.webp);
     background-size: cover;
     background-position: 50% 50%;
     width: 35%;
@@ -310,7 +322,7 @@ figcaption {
 }
 
 #img-left-top-green {
-    background-image: url(https://ableton-production.imgix.net/about/photo-3.jpg);
+    background-image: url(../img/green2.webp);
     background-size: cover;
     background-position: 50% 50%;
     width: 34%;
@@ -323,7 +335,7 @@ figcaption {
 }
 
 #img-left-bottom-green {
-    background-image: url(https://ableton-production.imgix.net/about/photo-4.jpg);
+    background-image: url(../img/green3.webp);
     background-size: cover;
     background-position: 50% 50%;
     width: 34%;
@@ -336,7 +348,7 @@ figcaption {
 }
 
 #img-right-green {
-    background-image: url(https://ableton-production.imgix.net/about/photo-5.jpg);
+    background-image: url(../img/green1.webp);
     background-size: cover;
     background-position: 50% 50%;
     width: 41%;
@@ -356,7 +368,7 @@ figcaption {
 }
 
 #img-center-colorless {
-    background-image: url(https://ableton-production.imgix.net/about/poster-meet-the-makers.jpg);
+    background-image: url(../img/colorless1.webp);
     background-size: cover;
     background-position: 50% 50%;
     margin: 0;
@@ -382,7 +394,7 @@ figcaption {
 }
 
 #img-left-purple {
-    background-image: url(https://ableton-production.imgix.net/about/photo-6-a.jpg);
+    background-image: url(../img/purple1.webp);
     background-size: cover;
     background-position: 50% 50%;
     width: 32%;
@@ -395,7 +407,7 @@ figcaption {
 }
 
 #img-right-purple {
-    background-image: url(https://ableton-production.imgix.net/about/photo-7.jpg);
+    background-image: url(../img/purple2.webp);
     background-size: cover;
     background-position: 50% 50%;
     width: 41%;
@@ -424,9 +436,9 @@ figcaption {
 }
 
 #img-left-blue {
-    background-image: url(https://ableton-production.imgix.net/about/photo-8.jpg);
+    background-image: url(../img/blue1.webp);
     background-size: cover;
-    background-position: right;
+    background-position: 50% 50%;
     width: 41.5%;
     height: 100%;
     position: absolute;
