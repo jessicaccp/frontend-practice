@@ -2,11 +2,10 @@
 /*  - mudanças para telas menores
     - imagens menores para telas menores
     - incluir tags dos navegadores
-    - link rel=preload
     - configurar forms
-    - configurar meta tags
     - favicon
-    - trocar variveis globais por valores */
+    - trocar variveis globais por valores
+    - sticky nav */
 
 :root {
     /* cores originais do projeto */
@@ -31,11 +30,12 @@
     --black: #333333;
 }
 
+/* sorted by appearance of the tags in the html */
+/* --- start - min-width 1600px or default settings --- */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /* max-width: 100vw; */
 }
 
 *::selection {
@@ -45,10 +45,9 @@
 
 body {
     background-color: var(--gray);
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Outfit', sans-serif, serif;
     color: var(--black);
     display: auto;
-    overflow-x: hidden;
 }
 
 #main-container {
@@ -58,74 +57,29 @@ body {
     overflow: hidden;
 }
 
+/* ---------- start - header ---------- */
 header {
     font-size: 18px;
     font-weight: bold;
 }
 
-.small-font-header {
-    font-size: 14px;
-}
-
-.blue-font:link,
-.blue-font:visited,
-.blue-font:hover {
-    color: var(--project-dark-blue);
-}
-
-.orange-font:link,
-.orange-font:visited,
-.orange-font:hover {
-    color: var(--project-orange);
-}
-
-header a:link,
-header a:visited,
-header a:hover {
-    color: var(--black);
-    text-decoration: none;
-}
-
-header ul {
-    list-style: none;
-}
-
-header li {
-    float: left;
-    display: block;
-    margin: 0 20px;
-}
-
-button {
-    background-color: var(--white);
-    border: none;
-    font-size: 18px;
-    font-family: 'Outfit', sans-serif;
-    font-weight: bold;
-}
-
-button a::after {
-    content: "+";
-}
-
 #top-nav-container {
-    width: 1600px;
     height: 69px;
     position: relative;
     overflow: hidden;
 }
 
-#logo-top-nav {
+#logo-header {
     width: 60px;
     height: 28px;
     background-color: var(--black);
     position: relative;
     overflow: hidden;
     margin: 20px;
-    left: 20px;
+    margin-left: 40px;
 }
 
-#text-logo-top-nav {
+#text-logo-header {
     color: var(--white);
     position: absolute;
     font-size: 11px;
@@ -135,33 +89,81 @@ button a::after {
     transform: translate(-50%, -50%);
 }
 
-#text-logo-top-nav a:link,
-#text-logo-top-nav a:visited,
-#text-logo-top-nav a:hover {
-    color: var(--white);
+a:link,
+a:visited,
+a:hover {
     text-decoration: none;
 }
 
-#left-top-nav {
+#text-logo-header a:link,
+#text-logo-header a:visited,
+#text-logo-header a:hover {
+    color: var(--white);
+}
+
+#left-top-nav-container {
     position: absolute;
     top: 50%;
-    left: 120px;
+    left: 140px;
     transform: translateY(-50%);
 }
 
-#right-top-nav {
+ul {
+    list-style: none;
+}
+
+header li {
+    float: left;
+    display: block;
+    margin-right: 40px;
+}
+
+header a:link,
+header a:visited,
+header a:hover {
+    color: var(--black);
+}
+
+button {
+    background-color: var(--white);
+    border: none;
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif, serif;
+    font-weight: bold;
+}
+
+header button a::after {
+    content: " +";
+}
+
+.red-font:link,
+.red-font:visited,
+.red-font:hover {
+    color: var(--project-orange);
+}
+
+#right-top-nav-container {
     position: absolute;
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
 }
 
-#right-top-nav .small-font-header {
-    margin-top: 4px;
+.blue-font:link,
+.blue-font:visited,
+.blue-font:hover {
+    color: var(--project-dark-blue);
+}
+
+.small-font {
+    font-size: 14px;
+}
+
+#right-top-nav-container .small-font {
+    padding-top: 4px;
 }
 
 #hidden-nav-container {
-    width: 1600px;
     height: 325px;
     display: none;
     position: relative;
@@ -174,7 +176,7 @@ button a::after {
 }
 
 #hidden-nav-container ul {
-    padding-left: 20px;
+    padding-left: 40px;
     line-height: 30px;
     font-weight: normal;
     padding-bottom: 42px;
@@ -185,27 +187,29 @@ button a::after {
     height: 90px;
 }
 
-#box-nav .a-title {
+.title-box-nav {
     font-weight: bold;
 }
 
 #sticky-nav-container {
-    width: 1600px;
     height: 68px;
     overflow: hidden;
     padding-left: 40px;
-    position: relative;
+    position: sticky;
     border-top: 2px solid var(--also-gray);
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 2;
+    top: 0px;
 }
 
 #sticky-nav-container ul {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    padding-top: 25px;
+    /* position: absolute; */
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
 }
 
 #header-img {
-    /* 5 4 */
     background-image: url("../img/header4.webp");
     background-size: cover;
     background-position: 50% 50%;
@@ -214,6 +218,7 @@ button a::after {
     overflow: hidden;
     position: relative;   
 }
+
 #header-h1 {
     padding: 0 30px 15px 30px;
     border: 10px solid var(--project-orange);
@@ -226,7 +231,9 @@ button a::after {
     transform: translate(-50%, -50%);
     z-index: 2;
 }
+/* ---------- end - header ---------- */
 
+/* ---------- start - main ---------- */
 .text-section {
     width: 800px;
     margin: 132px auto;
@@ -472,15 +479,16 @@ figcaption {
 }
 
 #text-right-blue a::after {
-    content: '\203A';
+    content: ' \203A';
 }
+/* ---------- end - main ---------- */
 
+/* ---------- start - footer ---------- */
 footer {
     height: 831px;
     width: 1600px;
     border-top: 2px solid var(--also-gray);
     padding: 120px 133.333px;
-    /* overflow: hidden; */
     position: relative;
     font-size: 18px;
     text-decoration: none;
@@ -549,8 +557,37 @@ input {
     height: 40px;
     margin-right: 10px;
     margin-top: 10px;
-    background-color: var(--black);
     float: left;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+}
+
+.social-media-square span {
+    position:absolute; 
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#facebook {
+    background-image: url(../icon/facebook.png);
+}
+
+#twitter {
+    background-image: url(../icon/twitter.png);
+}
+
+#youtube {
+    background-image: url(../icon/youtube.png);
+}
+
+#instagram {
+    background-image: url(../icon/instagram.png);
 }
 
 #top-middle-footer {
@@ -599,6 +636,8 @@ input {
 #logo-bottom-footer {
     float: right;
 }
+/* ---------- end - footer ---------- */
+/* --- end - min-width 1600px or default settings --- */
 
 @media only screen and (max-width: 1599px) {
     /* container branco largura da tela
