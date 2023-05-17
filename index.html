@@ -18,6 +18,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap" rel="stylesheet">
+
+    <!-- sticky nav hides when scroll down/shows when scroll up  -->
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        stickyNavId = "sticky-nav-container";
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById(stickyNavId).style.top = "0";
+            } else {
+                document.getElementById(stickyNavId).style.top = "-68px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+    <!-- / -->
+
+    <!-- show hidden nav when click on button -->
+    <script type="text/javascript">
+        function toggle_div(id) {
+            var hidden_nav = document.getElementById(id);
+
+            if (hidden_nav.style.display == "block")
+                hidden_nav.style.display = "none";
+            else
+                hidden_nav.style.display = "block";
+        }
+    </script>
+    <!-- / -->
+
 </head>
 
 <body>
@@ -27,18 +57,6 @@
                 <div id="logo-header">
                     <div id="text-logo-header" title="Company Homepage"><a href="#"><span>Logo</span></a></div>
                 </div>
-
-                <script type="text/javascript">
-                    function toggle_div(id) {
-                        var hidden_nav = document.getElementById(id);
-
-                        if (hidden_nav.style.display == "block")
-                            hidden_nav.style.display = "none";
-                        else
-                            hidden_nav.style.display = "block";
-                    }
-                </script>
-                <noscript>Your browser doesn't support JavaScript.</noscript>
 
                 <!-- NAV top left -->
                 <nav id="left-top-nav-container">
@@ -50,8 +68,8 @@
                         <li><a href="#">Page</a></li>
                         <li><a href="#">Another Page</a></li>
                         <li><a href="#">Last Page </a></li>
-                        <li><button><a href="#" onclick="javascript:toggle_div('hidden-nav-container')"
-                                    class="red-font">More </a></button></li>
+                        <li><button onclick="javascript:toggle_div('hidden-nav-container')"
+                                class="red-font">More</button></li>
                     </ul>
                 </nav>
                 <!-- / -->
@@ -109,20 +127,21 @@
             </div>
             <!-- / -->
 
-            <!-- NAV sticky -->
-            <nav id="sticky-nav-container" class="small-font">
-                <ul>
-                    <li><a href="#" class="red-font">Current Page</a></li>
-                    <li><a href="#">Page</a></li>
-                    <li><a href="#">Page</a></li>
-                </ul>
-            </nav>
-            <!-- / -->
-
-            <div id="header-img">
-                <h1 id="header-h1">Company</h1>
-            </div>
         </header>
+
+        <!-- NAV sticky -->
+        <nav id="sticky-nav-container" class="small-font">
+            <ul>
+                <li><a href="#" class="red-font">Current Page</a></li>
+                <li><a href="#">Page</a></li>
+                <li><a href="#">Page</a></li>
+            </ul>
+        </nav>
+        <!-- / -->
+
+        <section id="large-img">
+            <h1 id="large-title">Company</h1>
+        </section>
 
         <main>
             <section class="text-section">

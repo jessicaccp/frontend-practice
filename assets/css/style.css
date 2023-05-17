@@ -54,7 +54,7 @@ body {
     background-color: var(--white);
     width: 1600px;
     margin: 0 auto;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 /* ---------- start - header ---------- */
@@ -67,6 +67,7 @@ header {
     height: 69px;
     position: relative;
     overflow: hidden;
+    border-bottom: 2px solid var(--also-gray);
 }
 
 #logo-header {
@@ -88,6 +89,8 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+#text-logo-header span {}
 
 a:link,
 a:visited,
@@ -112,7 +115,8 @@ ul {
     list-style: none;
 }
 
-header li {
+header li,
+#sticky-nav-container li {
     float: left;
     display: block;
     margin-right: 40px;
@@ -120,7 +124,10 @@ header li {
 
 header a:link,
 header a:visited,
-header a:hover {
+header a:hover,
+#sticky-nav-container a:link,
+#sticky-nav-container a:visited,
+#sticky-nav-container a:hover {
     color: var(--black);
 }
 
@@ -130,15 +137,19 @@ button {
     font-size: 18px;
     font-family: 'Outfit', sans-serif, serif;
     font-weight: bold;
+    color: var(--project-orange);
 }
 
-header button a::after {
+header button::after {
     content: " +";
 }
 
 .red-font:link,
 .red-font:visited,
-.red-font:hover {
+.red-font:hover,
+#sticky-nav-container .red-font:link,
+#sticky-nav-container .red-font:visited,
+#sticky-nav-container .red-font:hover {
     color: var(--project-orange);
 }
 
@@ -168,6 +179,7 @@ header button a::after {
     display: none;
     position: relative;
     padding-top: 27px;
+    border-bottom: 2px solid var(--also-gray);
 }
 
 #hidden-nav-container h2 {
@@ -193,33 +205,53 @@ header button a::after {
 
 #sticky-nav-container {
     height: 68px;
-    overflow: hidden;
-    padding-left: 40px;
+    /* overflow: hidden; */
+    padding: 20px 40px;
     position: sticky;
-    border-top: 2px solid var(--also-gray);
-    background-color: rgba(255, 255, 255, 0.5);
-    z-index: 2;
+    /* border-top: 2px solid var(--also-gray); */
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 3;
     top: 0px;
+    font-weight: bold;
+
+    /* smooth scroll */
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: position 10s;
+    -ms-transition: position 10s;
+    -o-transition: position 10s;
+    transition: all 0.5s ease;
+    animation: smoothScroll 1s forwards;
+    /* / */
+}
+
+@keyframes smoothScroll {
+    0% {
+        transform: translateY(-40px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 #sticky-nav-container ul {
-    padding-top: 25px;
+    /* padding-top: 25px; */
     /* position: absolute; */
     /* top: 50%; */
     /* transform: translateY(-50%); */
 }
 
-#header-img {
+#large-img {
     background-image: url("../img/header4.webp");
     background-size: cover;
     background-position: 50% 50%;
     height: calc(100vh - 137px);
     margin: 0 133.333px;
     overflow: hidden;
-    position: relative;   
+    position: relative;
 }
 
-#header-h1 {
+#large-title {
     padding: 0 30px 15px 30px;
     border: 10px solid var(--project-orange);
     color: var(--project-orange);
@@ -231,6 +263,7 @@ header button a::after {
     transform: translate(-50%, -50%);
     z-index: 2;
 }
+
 /* ---------- end - header ---------- */
 
 /* ---------- start - main ---------- */
@@ -398,6 +431,7 @@ figcaption {
     left: 17%;
     right: 17%;
     z-index: 1;
+    overflow: hidden;
 }
 
 #img-left-purple {
@@ -481,6 +515,7 @@ figcaption {
 #text-right-blue a::after {
     content: ' \203A';
 }
+
 /* ---------- end - main ---------- */
 
 /* ---------- start - footer ---------- */
@@ -566,7 +601,7 @@ input {
 }
 
 .social-media-square span {
-    position:absolute; 
+    position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
@@ -636,6 +671,7 @@ input {
 #logo-bottom-footer {
     float: right;
 }
+
 /* ---------- end - footer ---------- */
 /* --- end - min-width 1600px or default settings --- */
 
