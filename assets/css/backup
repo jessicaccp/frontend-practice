@@ -6,7 +6,6 @@ to-do
 - incluir tags dos navegadores
 - configurar forms
 - favicon
-- trocar variveis globais por valores
 
 cores originais
 --yellow: #fbffa7;
@@ -48,11 +47,14 @@ body {
     font-family: 'Outfit', sans-serif, serif;
     color: #333333;
     display: auto;
+    overflow-x: hidden;
+    width: 100vw;
 }
 
 #main-container {
     background-color: #ffffff;
-    width: 1600px;
+    max-width: 1600px;
+    width: 100vw;
     margin: 0 auto;
 }
 
@@ -116,7 +118,7 @@ header li,
 #sticky-nav-container li {
     float: left;
     display: block;
-    margin-right: 40px;
+    padding-right: 40px;
 }
 
 header a:link,
@@ -192,7 +194,8 @@ header button::after {
 }
 
 #box-nav li {
-    width: 350px;
+    max-width: 350px;
+    /* width: 21.875vw; */
     height: 90px;
 }
 
@@ -220,7 +223,7 @@ header button::after {
 
 @keyframes smoothScroll {
     0% {
-        transform: translateY(-40px);
+        transform: translateY(-68px);
     }
 
     100% {
@@ -233,7 +236,8 @@ header button::after {
     background-size: cover;
     background-position: 50% 50%;
     height: calc(100vh - 137px);
-    margin: 0 133.333px;
+    /* height: 100vh; */
+    margin: 0 8.333%;
     overflow: hidden;
     position: relative;
 }
@@ -255,7 +259,8 @@ header button::after {
 /* ---------- start - main ---------- */
 
 .text-section {
-    width: 800px;
+    width: 50vw;
+    max-width: 800px;
     margin: 133.333px auto;
     position: relative;
 }
@@ -278,7 +283,7 @@ header button::after {
 }
 
 #yellow-container {
-    height: 933.333px;
+    height: 58.333vw;
     position: relative;
 }
 
@@ -318,13 +323,15 @@ header button::after {
 }
 
 video {
-    width: 800px;
+    max-width: 800px;
+    width: 50vw;
     display: block;
     margin: 0 auto;
 }
 
 figcaption {
-    width: 800px;
+    max-width: 800px;
+    width: 50vw;
     margin: 0 auto;
     font-size: 13px;
     font-weight: bold;
@@ -332,7 +339,7 @@ figcaption {
 }
 
 #green-container {
-    height: 1200px;
+    height: 58.333vw;
     position: relative;
 }
 
@@ -385,10 +392,12 @@ figcaption {
 }
 
 #colorless-container {
-    width: 800px;
-    height: 450px;
+    max-width: 800px;
+    width: 50vw;
+    height: 28.125vw;
     margin: 0 auto;
     position: relative;
+    display: block;
 }
 
 #img-center-colorless {
@@ -403,7 +412,7 @@ figcaption {
 }
 
 #purple-container {
-    height: 933.333px;
+    height: 58.333vw;
     position: relative;
 }
 
@@ -502,12 +511,15 @@ figcaption {
 /* ---------- start - footer ---------- */
 
 footer {
-    height: 831px;
+    height: 51.94vw;
+    max-height: 831.04px;
     border-top: 2px solid #eeeeee;
-    padding: 131.333px 133.333px 133.333px 133.333px;
+    padding: 133.333px;
+    padding-bottom: 0;
     position: relative;
     font-size: 18px;
     text-decoration: none;
+    overflow: hidden;
 }
 
 footer a:link,
@@ -535,7 +547,7 @@ footer h3 {
 }
 
 #footer-container {
-    margin: 66.666px 0 0 0;
+    margin: 4.166vw 0 0 0;
     position: relative;
     height: 440px;
     line-height: 30px;
@@ -661,8 +673,8 @@ input#submit {
     width: 100%;
     float: left;
     left: 0;
+    bottom: 8.333%;
     position: relative;
-    padding-bottom: 120px;
     font-size: 12px;
     font-weight: bold;
 }
@@ -685,12 +697,29 @@ input#submit {
     div colorida tudo diminui proporcionalmente constante
     div azul largura diminui constante
     section largura diminui constante */
+
+    footer {
+        padding: 8.333vw;
+        padding-bottom: 0;
+    }
 }
 
 @media only screen and (max-width: 1279px) {
     /* menu fonte tamanho diminui
     div azul muda formato
     div azul imagem diminui constantemente */
+
+    header {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    .small-font {
+        font-size: 12px;
+    }
 }
 
 @media only screen and (max-width: 1123px) {
@@ -705,6 +734,11 @@ input#submit {
 
 @media only screen and (max-width: 767px) {
     /* header fonte tamanho diminui */
+
+    #large-title {
+        font-size: 64px;
+        border: 5px solid;
+    }
 }
 
 @media only screen and (max-width: 419px) {

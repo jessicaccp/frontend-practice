@@ -1,0 +1,7 @@
+@media only screen and (max-width: 767px) {
+
+   #large-title {
+       font-size: 64px;
+       border: 5px solid;
+   }
+}
