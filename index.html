@@ -260,15 +260,16 @@
                     <ul>
                         <li>
                             <h3>
-                                Heading
+                                Newsletter
                             </h3>
                         </li>
                         <li>
                             <p>Something about why the visitor should insert their email address below. And some more
-                                text.</p>
+                                text. And some more.</p>
                         </li>
                         <li>
-                            <form><input type="email" id="email" name="email" value="Email Address">
+                            <form method="get" name="newsletter-email">
+                                <input id="email" name="email" type="email" placeholder="Email Address" required>
                                 <input id="submit" type="submit" value="Sign up">
                             </form>
                         </li>
@@ -277,9 +278,9 @@
 
                 <div id="top-left-footer">
                     <ul>
-                        <li><a class="arrow-a" href="#">Page</a></li>
-                        <li><a class="arrow-a" href="#">Page</a></li>
-                        <li><a class="arrow-a" href="#">Page</a></li>
+                        <li><a class="arrow-a" href="#">Lorem ipsum dolor sit amet</a></li>
+                        <li><a class="arrow-a" href="#">Vivamus a ligula tempor</a></li>
+                        <li><a class="arrow-a" href="#">Nam vel est egestas</a></li>
                     </ul>
                     <div class="social-media-square" id="facebook"><a href="#" alt="Facebook"><span></span></a></div>
                     <div class="social-media-square" id="twitter"><a href="#" alt="Twitter"><span></span></a></div>
@@ -292,9 +293,9 @@
                         <li>
                             <h3>Heading</h3>
                         </li>
-                        <li><a class="arrow-a" href="#">Page</a></li>
-                        <li><a class="arrow-a" href="#">Page</a></li>
-                        <li><a class="arrow-a" href="#">Page</a></li>
+                        <li><a class="arrow-a" href="#">Donec et risus rutrum</a></li>
+                        <li><a class="arrow-a" href="#">In consequat est elementum</a></li>
+                        <li><a class="arrow-a" href="#">Nullam bibendum odio vel enim consequat</a></li>
                     </ul>
                 </div>
 
@@ -303,9 +304,9 @@
                         <li>
                             <h3>Heading</h3>
                         </li>
-                        <li><a class="arrow-a" href="#">Page</a></li>
-                        <li><a class="arrow-a" href="#">Page</a></li>
-                        <li><a class="arrow-a" href="#">Page</a></li>
+                        <li><a class="arrow-a" href="#">Phasellus a sem pharetra</a></li>
+                        <li><a class="arrow-a" href="#">Aliquam quis tortor suscipit</a></li>
+                        <li><a class="arrow-a" href="#">Fusce eu magna fringilla</a></li>
                     </ul>
                 </div>
 
@@ -314,17 +315,24 @@
                         <li>
                             <h3>Heading</h3>
                         </li>
-                        <li><a class="arrow-a" href="#">Page</a></li>
-                        <li><a class="arrow-a" href="#">Page</a></li>
+                        <li><a class="arrow-a" href="#">Cras eu elit varius</a></li>
+                        <li><a class="arrow-a" href="#">Quisque in odio rhoncus</a></li>
                     </ul>
                 </div>
 
                 <div id="language-footer">
                     <ul>
                         <li>
-                            <h3>Heading</h3>
+                            <h3>Language</h3>
                         </li>
-                        <li><input> <input></li>
+                        <li>
+                            <form action="/set-language/" method="post">
+                                <select name='language'>
+                                    <option value='en' selected>English</option>
+                                    <option value='pt'>Português</option>
+                                </select>
+                            </form>
+                        </li>
                     </ul>
                 </div>
 
@@ -333,12 +341,12 @@
             <div id="nav-bottom-footer">
                 <nav>
                     <ul>
-                        <li><a href="#">Page</a></li>
-                        <li><a href="#">Page</a></li>
-                        <li><a href="#">Page</a></li>
-                        <li><a href="#">Page</a></li>
-                        <li><a href="#">Page</a></li>
-                        <li><a href="#">Page</a></li>
+                        <li><a href="#">Lorem ipsum</a></li>
+                        <li><a href="#">Curabitur iaculis</a></li>
+                        <li><a href="#">Integer faucibus</a></li>
+                        <li><a href="#">Curabitur ornare</a></li>
+                        <li><a href="#">Sed malesuada</a></li>
+                        <li><a href="#">Maecenas commodo</a></li>
                     </ul>
                 </nav>
 

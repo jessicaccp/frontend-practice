@@ -1,34 +1,34 @@
-/* todo: */
-/*  - mudanças para telas menores
-    - imagens menores para telas menores
-    - incluir tags dos navegadores
-    - configurar forms
-    - favicon
-    - trocar variveis globais por valores
-    - sticky nav */
+/* --- notes ---
 
-:root {
-    /* cores originais do projeto */
-    /* --project-yellow: #fbffa7; */
-    /* --project-blue: #b1c5ff; */
-    /* --project-green: #b6ffc0; */
-    /* --project-orange: #ff764d; */
-    /* --project-purple: #d5b3ff; */
-    /* --project-dark-blue: #0000ff; */
+to-do
+- mudanças para telas menores
+- imagens menores para telas menores
+- incluir tags dos navegadores
+- configurar forms
+- favicon
+- trocar variveis globais por valores
 
-    /* cores atuais */
-    --project-yellow: #F9FFBD;
-    --project-blue: #BDE9FF;
-    --project-green: #BDFFCC;
-    --project-purple: #EABDFF;
-    --project-dark-blue: #0000F5;
-    --project-orange: #992400;
+cores originais
+--yellow: #fbffa7;
+--blue: #b1c5ff;
+--green: #b6ffc0;
+--orange: #ff764d;
+--purple: #d5b3ff;
+--dark-blue: #0000ff;
 
-    --white: #ffffff;
-    --gray: #f3f3f3;
-    --also-gray: #eeeeee;
-    --black: #333333;
-}
+cores atuais
+--yellow: #F9FFBD;
+--blue: #BDE9FF;
+--green: #BDFFCC;
+--purple: #EABDFF;
+--dark-blue: #0000F5;
+--orange: #992400;
+--white: #ffffff;
+--gray: #f3f3f3;
+--gray2: #eeeeee;
+--black: #333333;
+
+------ */
 
 /* sorted by appearance of the tags in the html */
 /* --- start - min-width 1600px or default settings --- */
@@ -39,22 +39,21 @@
 }
 
 *::selection {
-    background: var(--project-dark-blue);
-    color: var(--gray);
+    background: #0000F5;
+    color: #f3f3f3;
 }
 
 body {
-    background-color: var(--gray);
+    background-color: #f3f3f3;
     font-family: 'Outfit', sans-serif, serif;
-    color: var(--black);
+    color: #333333;
     display: auto;
 }
 
 #main-container {
-    background-color: var(--white);
+    background-color: #ffffff;
     width: 1600px;
     margin: 0 auto;
-    /* overflow: hidden; */
 }
 
 /* ---------- start - header ---------- */
@@ -67,13 +66,13 @@ header {
     height: 69px;
     position: relative;
     overflow: hidden;
-    border-bottom: 2px solid var(--also-gray);
+    border-bottom: 2px solid #eeeeee;
 }
 
 #logo-header {
     width: 60px;
     height: 28px;
-    background-color: var(--black);
+    background-color: #333333;
     position: relative;
     overflow: hidden;
     margin: 20px;
@@ -81,7 +80,7 @@ header {
 }
 
 #text-logo-header {
-    color: var(--white);
+    color: #ffffff;
     position: absolute;
     font-size: 11px;
     text-transform: uppercase;
@@ -89,8 +88,6 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-#text-logo-header span {}
 
 a:link,
 a:visited,
@@ -101,13 +98,13 @@ a:hover {
 #text-logo-header a:link,
 #text-logo-header a:visited,
 #text-logo-header a:hover {
-    color: var(--white);
+    color: #ffffff;
 }
 
 #left-top-nav-container {
     position: absolute;
     top: 50%;
-    left: 140px;
+    left: 133.333px;
     transform: translateY(-50%);
 }
 
@@ -128,16 +125,16 @@ header a:hover,
 #sticky-nav-container a:link,
 #sticky-nav-container a:visited,
 #sticky-nav-container a:hover {
-    color: var(--black);
+    color: #333333;
 }
 
 button {
-    background-color: var(--white);
+    background-color: #ffffff;
     border: none;
     font-size: 18px;
     font-family: 'Outfit', sans-serif, serif;
     font-weight: bold;
-    color: var(--project-orange);
+    color: #992400;
 }
 
 header button::after {
@@ -150,7 +147,7 @@ header button::after {
 #sticky-nav-container .red-font:link,
 #sticky-nav-container .red-font:visited,
 #sticky-nav-container .red-font:hover {
-    color: var(--project-orange);
+    color: #992400;
 }
 
 #right-top-nav-container {
@@ -163,7 +160,7 @@ header button::after {
 .blue-font:link,
 .blue-font:visited,
 .blue-font:hover {
-    color: var(--project-dark-blue);
+    color: #0000F5;
 }
 
 .small-font {
@@ -178,8 +175,8 @@ header button::after {
     height: 325px;
     display: none;
     position: relative;
-    padding-top: 27px;
-    border-bottom: 2px solid var(--also-gray);
+    padding-top: 35px;
+    border-bottom: 2px solid #eeeeee;
 }
 
 #hidden-nav-container h2 {
@@ -205,10 +202,8 @@ header button::after {
 
 #sticky-nav-container {
     height: 68px;
-    /* overflow: hidden; */
     padding: 20px 40px;
     position: sticky;
-    /* border-top: 2px solid var(--also-gray); */
     background-color: rgba(255, 255, 255, 0.9);
     z-index: 3;
     top: 0px;
@@ -221,7 +216,6 @@ header button::after {
     -o-transition: position 10s;
     transition: all 0.5s ease;
     animation: smoothScroll 1s forwards;
-    /* / */
 }
 
 @keyframes smoothScroll {
@@ -232,13 +226,6 @@ header button::after {
     100% {
         transform: translateY(0px);
     }
-}
-
-#sticky-nav-container ul {
-    /* padding-top: 25px; */
-    /* position: absolute; */
-    /* top: 50%; */
-    /* transform: translateY(-50%); */
 }
 
 #large-img {
@@ -253,8 +240,8 @@ header button::after {
 
 #large-title {
     padding: 0 30px 15px 30px;
-    border: 10px solid var(--project-orange);
-    color: var(--project-orange);
+    border: 10px solid #992400;
+    color: #992400;
     font-size: 130px;
     font-weight: bold;
     position: absolute;
@@ -265,19 +252,18 @@ header button::after {
 }
 
 /* ---------- end - header ---------- */
-
 /* ---------- start - main ---------- */
+
 .text-section {
     width: 800px;
-    margin: 132px auto;
+    margin: 133.333px auto;
     position: relative;
 }
 
 .text-section a:link,
 .text-section a:visited,
 .text-section a:hover {
-    text-decoration: none;
-    color: var(--project-dark-blue);
+    color: #0000F5;
 }
 
 .text-section h2 {
@@ -292,14 +278,13 @@ header button::after {
 }
 
 #yellow-container {
-    width: 1600px;
     height: 933.333px;
     position: relative;
 }
 
 #yellow-block {
-    background-color: var(--project-yellow);
-    width: 58%;
+    background-color: #F9FFBD;
+    width: 58.333%;
     position: absolute;
     height: 100%;
     right: 0;
@@ -310,12 +295,12 @@ header button::after {
     background-image: url(../img/yellow1.webp);
     background-size: cover;
     background-position: 50% 50%;
-    width: 41%;
+    width: 41.666%;
     position: absolute;
     z-index: 2;
-    left: 8.5%;
-    top: 15%;
-    bottom: 15%;
+    left: 8.333%;
+    top: 14.285%;
+    bottom: 14.285%;
     overflow: hidden;
 }
 
@@ -323,13 +308,13 @@ header button::after {
     background-image: url(../img/yellow2.webp);
     background-size: cover;
     background-position: 50% 50%;
-    width: 35%;
+    width: 33.333%;
     position: absolute;
     z-index: 2;
     overflow: hidden;
-    top: 28.5%;
-    bottom: 28.5%;
-    right: 8.5%;
+    top: 28.57%;
+    bottom: 28.57%;
+    right: 8.333%;
 }
 
 video {
@@ -347,14 +332,13 @@ figcaption {
 }
 
 #green-container {
-    width: 1600px;
     height: 1200px;
     position: relative;
 }
 
 #green-block {
-    background-color: var(--project-green);
-    width: 60%;
+    background-color: #BDFFCC;
+    width: 58.333%;
     position: absolute;
     height: 100%;
     left: 0;
@@ -365,12 +349,12 @@ figcaption {
     background-image: url(../img/green2.webp);
     background-size: cover;
     background-position: 50% 50%;
-    width: 34%;
+    width: 33.333%;
     position: absolute;
     z-index: 2;
-    left: 8.5%;
-    top: 12%;
-    bottom: 55%;
+    left: 8.333%;
+    top: 11.111%;
+    bottom: 55.555%;
     overflow: hidden;
 }
 
@@ -378,12 +362,12 @@ figcaption {
     background-image: url(../img/green3.webp);
     background-size: cover;
     background-position: 50% 50%;
-    width: 34%;
+    width: 33.333%;
     position: absolute;
     z-index: 2;
-    left: 8.5%;
-    top: 55%;
-    bottom: 12%;
+    left: 8.333%;
+    top: 55.555%;
+    bottom: 11.111%;
     overflow: hidden;
 }
 
@@ -391,13 +375,13 @@ figcaption {
     background-image: url(../img/green1.webp);
     background-size: cover;
     background-position: 50% 50%;
-    width: 41%;
+    width: 41.666%;
     position: absolute;
     z-index: 2;
     overflow: hidden;
-    top: 23%;
-    bottom: 23%;
-    right: 8.5%;
+    top: 22.222%;
+    bottom: 22.222%;
+    right: 8.333%;
 }
 
 #colorless-container {
@@ -419,17 +403,16 @@ figcaption {
 }
 
 #purple-container {
-    width: 1600px;
     height: 933.333px;
     position: relative;
 }
 
 #purple-block {
-    background-color: var(--project-purple);
+    background-color: #EABDFF;
     position: absolute;
     height: 100%;
-    left: 17%;
-    right: 17%;
+    left: 16.666%;
+    right: 16.666%;
     z-index: 1;
     overflow: hidden;
 }
@@ -438,12 +421,12 @@ figcaption {
     background-image: url(../img/purple1.webp);
     background-size: cover;
     background-position: 50% 50%;
-    width: 32%;
+    width: 33.333%;
     position: absolute;
     z-index: 2;
-    left: 8.5%;
-    top: 29%;
-    bottom: 29%;
+    left: 8.333%;
+    top: 28.571%;
+    bottom: 28.571%;
     overflow: hidden;
 }
 
@@ -451,28 +434,27 @@ figcaption {
     background-image: url(../img/purple2.webp);
     background-size: cover;
     background-position: 50% 50%;
-    width: 41%;
+    width: 41.666%;
     position: absolute;
     z-index: 2;
     overflow: hidden;
-    top: 14%;
-    bottom: 14%;
+    top: 14.285%;
+    bottom: 14.285%;
     right: 0;
 }
 
 #blue-container {
-    width: 1600px;
     height: 666.666px;
     position: relative;
-    margin: 0 0 132px 0;
+    margin: 0 0 133.333px 0;
 }
 
 #blue-block {
-    background-color: var(--project-blue);
+    background-color: #BDE9FF;
     position: absolute;
     height: 100%;
-    left: 8.5%;
-    right: 8.5%;
+    left: 8.333%;
+    right: 8.333%;
     z-index: 1;
 }
 
@@ -480,19 +462,20 @@ figcaption {
     background-image: url(../img/blue1.webp);
     background-size: cover;
     background-position: 50% 50%;
-    width: 41.5%;
-    height: 100%;
+    width: 41.666%;
+    top: 0;
+    bottom: 0;
     position: absolute;
     z-index: 2;
-    left: 8.5%;
+    left: 8.333%;
     overflow: hidden;
 }
 
 #text-right-blue {
     z-index: 2;
     height: 100%;
-    left: 58.5%;
-    right: 17%;
+    left: 58.333%;
+    right: 16.666%;
     position: absolute;
     font-size: 17px;
     line-height: 41px;
@@ -508,8 +491,7 @@ figcaption {
 #text-right-blue a:link,
 #text-right-blue a:visited,
 #text-right-blue a:hover {
-    color: var(--project-dark-blue);
-    text-decoration: none;
+    color: #0000F5;
 }
 
 #text-right-blue a::after {
@@ -517,13 +499,12 @@ figcaption {
 }
 
 /* ---------- end - main ---------- */
-
 /* ---------- start - footer ---------- */
+
 footer {
     height: 831px;
-    width: 1600px;
-    border-top: 2px solid var(--also-gray);
-    padding: 120px 133.333px;
+    border-top: 2px solid #eeeeee;
+    padding: 131.333px 133.333px 133.333px 133.333px;
     position: relative;
     font-size: 18px;
     text-decoration: none;
@@ -532,8 +513,7 @@ footer {
 footer a:link,
 footer a:visited,
 footer a:hover {
-    color: var(--black);
-    text-decoration: none;
+    color: #333333;
 }
 
 .arrow-a::after {
@@ -543,6 +523,7 @@ footer a:hover {
 footer h3 {
     font-weight: bold;
     font-size: 18px;
+    padding-bottom: 5px;
 }
 
 #logo-top-footer {
@@ -554,7 +535,7 @@ footer h3 {
 }
 
 #footer-container {
-    margin: 64px 0 0 0;
+    margin: 66.666px 0 0 0;
     position: relative;
     height: 440px;
     line-height: 30px;
@@ -571,13 +552,32 @@ footer ul {
     right: 0;
 }
 
-input {
+#newsletter-footer p {
+    padding-bottom: 10px;
+}
+
+input,
+select {
     height: 50px;
     border: none;
-    background-color: var(--gray);
-    color: var(--black);
+    background-color: #f3f3f3;
+    color: #333333;
     font-size: 16px;
     padding: 0 20px;
+    font-family: 'Outfit', sans-serif, serif;
+}
+
+input#email {
+    width: calc(100% - 124px);
+    margin: 0;
+    border: 0;
+}
+
+input#submit {
+    width: 120px;
+    background-color: #0000F5;
+    color: #ffffff;
+    font-weight: bold;
 }
 
 #top-left-footer {
@@ -585,6 +585,7 @@ input {
     position: absolute;
     top: 0;
     left: 0;
+    padding-right: 20px;
 }
 
 .social-media-square {
@@ -630,6 +631,7 @@ input {
     position: absolute;
     top: 0;
     left: 400px;
+    padding-right: 20px;
 }
 
 #bottom-left-footer {
@@ -637,6 +639,7 @@ input {
     position: absolute;
     top: 220px;
     left: 0;
+    padding-right: 20px;
 }
 
 #bottom-middle-footer {
@@ -644,6 +647,7 @@ input {
     position: absolute;
     top: 220px;
     left: 400px;
+    padding-right: 20px;
 }
 
 #language-footer {
