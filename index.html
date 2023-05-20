@@ -12,8 +12,20 @@
     <meta name="author" content="Jessica Patricio">
     <!-- / -->
 
-    <link rel="preload" href="assets/css/style.css" as="style">
-    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/default.css" rel="stylesheet">
+    <link href="assets/css/header.css" rel="stylesheet">
+    <link href="assets/css/footer.css" rel="stylesheet">
+
+    <!-- <link href="assets/css/default.css" rel="stylesheet" />
+    <link href="assets/css/max1599.css" rel="stylesheet" />
+    <link href="assets/css/max1279.css" rel="stylesheet" />
+    <link href="assets/css/max1123.css" rel="stylesheet" />
+    <link href="assets/css/max1023.css" rel="stylesheet" />
+    <link href="assets/css/max767.css" rel="stylesheet" />
+    <link href="assets/css/max419.css" rel="stylesheet" />
+    <link href="assets/css/max215.css" rel="stylesheet" />
+    <link href="assets/css/max129.css" rel="stylesheet" /> -->
+
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,11 +34,26 @@
     <!-- sticky nav hides when scroll down/shows when scroll up  -->
     <script>
         var prevScrollpos = window.pageYOffset;
-        stickyNavId = "sticky-nav-container";
+        window.onscroll = function (id) {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById(id).style.top = "-2px";
+            } else {
+                document.getElementById(id).style.top = "-68px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+    <!-- / -->
+
+    <!-- show hidden nav when click on button -->
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        stickyNavId = "sticky";
         window.onscroll = function () {
             var currentScrollPos = window.pageYOffset;
             if (prevScrollpos > currentScrollPos) {
-                document.getElementById(stickyNavId).style.top = "0";
+                document.getElementById(stickyNavId).style.top = "-2px";
             } else {
                 document.getElementById(stickyNavId).style.top = "-68px";
             }
@@ -35,58 +62,86 @@
     </script>
     <!-- / -->
 
-    <!-- show hidden nav when click on button -->
-    <script type="text/javascript">
-        function toggle_div(id) {
-            var hidden_nav = document.getElementById(id);
-
-            if (hidden_nav.style.display == "block")
-                hidden_nav.style.display = "none";
-            else
-                hidden_nav.style.display = "block";
-        }
-    </script>
-    <!-- / -->
-
 </head>
 
 <body>
     <div id="main-container">
+        <!-- div top, div hidden -->
         <header>
-            <div id="top-nav-container">
-                <div id="logo-header">
-                    <div id="text-logo-header" title="Company Homepage"><a href="#"><span>Logo</span></a></div>
+            <!-- section logo, nav left, nav right -->
+            <div id="top">
+                <div id="logo-top" class="y-center">
+                    <a href="#" title="Company Homepage">
+                        <span>
+                            <p class="xy-center">
+                                Logo
+                            </p>
+                        </span>
+                    </a>
                 </div>
-
-                <!-- NAV top left -->
-                <nav id="left-top-nav-container">
+                <nav id="left-top" class="y-center">
                     <ul>
-                        <li><a href="#">First Page</a></li>
-                        <li><a href="#">Page</a></li>
-                        <li><a href="#">Page</a></li>
-                        <li><a href="#">Page</a></li>
-                        <li><a href="#">Page</a></li>
-                        <li><a href="#">Another Page</a></li>
-                        <li><a href="#">Last Page </a></li>
-                        <li><button onclick="javascript:toggle_div('hidden-nav-container')"
-                                class="red-font">More</button></li>
+                        <li>
+                            <a href="#">
+                                First Page
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Page
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Page
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Page
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Page
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Another Page
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Last Page
+                            </a>
+                        </li>
+                        <li>
+                            <button onclick="javascript:toggle_div()">
+                                More
+                            </button>
+                        </li>
                     </ul>
                 </nav>
-                <!-- / -->
-
-                <!-- NAV top right -->
-                <nav id="right-top-nav-container">
+                <nav id="right-top" class="y-center">
                     <ul>
-                        <li><a href="#" class="blue-font">Insert feature here</a></li>
-                        <li class="small-font"><a href="#">Log in / Register</a></li>
+                        <li>
+                            <a href="#">
+                                Insert feature here
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Log in / Register
+                            </a>
+                        </li>
                     </ul>
                 </nav>
-                <!-- / -->
             </div>
 
-            <!-- NAV hidden -->
-            <div id="hidden-nav-container">
-                <section>
+            <!-- toggle menu -->
+            <div id="hidden">
+                <section class="row-hidden">
                     <h2>More nice pages:</h2>
                     <nav>
                         <ul>
@@ -94,50 +149,72 @@
                             <li><a href="#">Another Page</a></li>
                             <li><a href="#">One More Page</a></li>
                             <li><a href="#">Another What?</a></li>
-                            <li><a href="#" class="red-font">Current Page</a></li>
+                            <li><a href="#">Current Page</a></li>
                             <li><a href="#">Another Page</a></li>
                             <li><a href="#">Only One More Page</a></li><br>
                         </ul>
                     </nav>
                 </section>
-
-                <section>
+                <section class="row-hidden">
                     <h2>Even more nice pages:</h2>
-                    <nav id="box-nav">
-                        <ul>
-                            <li><a href="#">
-                                    <p class="title-box-nav">Page</p>
-                                    <p>Description of some really nice page from the Company's website.</p>
-                                </a></li>
-                            <li><a href="#">
-                                    <p class="title-box-nav">Page</p>
-                                    <p>Description of some really nice page from the Company's website.</p>
-                                </a></li>
-                            <li><a href="#">
-                                    <p class="title-box-nav">Page</p>
-                                    <p>Description of some really nice page from the Company's website.</p>
-                                </a></li>
-                            <li><a href="#">
-                                    <p class="title-box-nav">Page</p>
-                                    <p>Description of some really nice page from the Company's website.</p>
-                                </a></li>
-                        </ul>
-                    </nav>
+                    <div class="x-scroll">
+                        <nav>
+                            <ul class="flex-auto">
+                                <li class="flex-auto">
+                                    <a href="#">
+                                        <h3>
+                                            Page
+                                        </h3>
+                                        <p>
+                                            Description of some really nice page from the Company's website.
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="flex-auto">
+                                    <a href="#">
+                                        <h3>
+                                            Page
+                                        </h3>
+                                        <p>
+                                            Description of some really nice page from the Company's website.
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="flex-auto">
+                                    <a href="#">
+                                        <h3>
+                                            Page
+                                        </h3>
+                                        <p>
+                                            Description of some really nice page from the Company's website.
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="flex-auto">
+                                    <a href="#">
+                                        <h3>
+                                            Page
+                                        </h3>
+                                        <p>
+                                            Description of some really nice page from the Company's website.
+                                        </p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </section>
             </div>
-            <!-- / -->
-
         </header>
 
-        <!-- NAV sticky -->
-        <nav id="sticky-nav-container" class="small-font">
-            <ul>
-                <li><a href="#" class="red-font">Current Page</a></li>
+        <nav id="sticky">
+            <ul class="y-center">
+                <li><a href="#">Current Page</a></li>
                 <li><a href="#">Page</a></li>
                 <li><a href="#">Page</a></li>
             </ul>
         </nav>
-        <!-- / -->
+        <!-- revised until here -->
 
         <section id="large-img">
             <h1 id="large-title">Company</h1>
@@ -167,12 +244,12 @@
                     a. Duis sem sem, venenatis in sapien in, euismod sollicitudin felis. Donec rutrum ultrices.</p>
             </section>
 
-            <figure>
+            <!-- <figure>
                 <video poster="assets/img/video1.webp" controls="true" autoplay="false" preload="metadata">
                     <source src="#">
                 </video>
                 <figcaption>Aliquam vel commodo enim, id</figcaption>
-            </figure>
+            </figure> -->
 
             <section class="text-section">
                 <h2>Aenean id elit ligula. In at sagittis magna. Nullam est neque, posuere eu venenatis in, blandit eu
@@ -253,93 +330,95 @@
         </main>
 
         <footer>
-            <div id="logo-top-footer">Company</div>
-
-            <div id="footer-container">
-                <div id="newsletter-footer">
-                    <ul>
-                        <li>
-                            <h3>
-                                Newsletter
-                            </h3>
-                        </li>
-                        <li>
-                            <p>Something about why the visitor should insert their email address below. And some more
-                                text. And some more.</p>
-                        </li>
-                        <li>
-                            <form method="get" name="newsletter-email">
-                                <input id="email" name="email" type="email" placeholder="Email Address" required>
-                                <input id="submit" type="submit" value="Sign up">
-                            </form>
-                        </li>
-                    </ul>
+            <div id="logo-footer">
+                <div>
+                    <p>
+                        Company
+                    </p>
                 </div>
-
-                <div id="top-left-footer">
-                    <ul>
-                        <li><a class="arrow-a" href="#">Lorem ipsum dolor sit amet</a></li>
-                        <li><a class="arrow-a" href="#">Vivamus a ligula tempor</a></li>
-                        <li><a class="arrow-a" href="#">Nam vel est egestas</a></li>
-                    </ul>
-                    <div class="social-media-square" id="facebook"><a href="#" alt="Facebook"><span></span></a></div>
-                    <div class="social-media-square" id="twitter"><a href="#" alt="Twitter"><span></span></a></div>
-                    <div class="social-media-square" id="youtube"><a href="#" alt="Youtube"><span></span></a></div>
-                    <div class="social-media-square" id="instagram"><a href="#" alt="Instagram"><span></span></a></div>
-                </div>
-
-                <div id="top-middle-footer">
-                    <ul>
-                        <li>
-                            <h3>Heading</h3>
-                        </li>
-                        <li><a class="arrow-a" href="#">Donec et risus rutrum</a></li>
-                        <li><a class="arrow-a" href="#">In consequat est elementum</a></li>
-                        <li><a class="arrow-a" href="#">Nullam bibendum odio vel enim consequat</a></li>
-                    </ul>
-                </div>
-
-                <div id="bottom-left-footer">
-                    <ul>
-                        <li>
-                            <h3>Heading</h3>
-                        </li>
-                        <li><a class="arrow-a" href="#">Phasellus a sem pharetra</a></li>
-                        <li><a class="arrow-a" href="#">Aliquam quis tortor suscipit</a></li>
-                        <li><a class="arrow-a" href="#">Fusce eu magna fringilla</a></li>
-                    </ul>
-                </div>
-
-                <div id="bottom-middle-footer">
-                    <ul>
-                        <li>
-                            <h3>Heading</h3>
-                        </li>
-                        <li><a class="arrow-a" href="#">Cras eu elit varius</a></li>
-                        <li><a class="arrow-a" href="#">Quisque in odio rhoncus</a></li>
-                    </ul>
-                </div>
-
-                <div id="language-footer">
-                    <ul>
-                        <li>
-                            <h3>Language</h3>
-                        </li>
-                        <li>
-                            <form action="/set-language/" method="post">
-                                <select name='language'>
-                                    <option value='en' selected>English</option>
-                                    <option value='pt'>Português</option>
-                                </select>
-                            </form>
-                        </li>
-                    </ul>
-                </div>
-
             </div>
-
-            <div id="nav-bottom-footer">
-                <nav>
+            <div id="nav-flex">
+                <section class="row-nav-flex">
+                    <div class="flex-3">
+                        <ul>
+                            <li>
+                                <h3>
+                                    Newsletter
+                                </h3>
+                            </li>
+                            <li>
+                                <p>Something about why the visitor should insert their email address below. And some more
+                                    text. And some more.</p>
+                            </li>
+                            <li>
+                                <form method="get" name="newsletter-email">
+                                    <input id="email" name="email" type="email" placeholder="Email Address" required>
+                                    <input id="submit" type="submit" value="Sign up">
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex-3">
+                        <ul>
+                            <li><a class="arrow-a" href="#">Lorem ipsum dolor sit amet</a></li>
+                            <li><a class="arrow-a" href="#">Vivamus a ligula tempor</a></li>
+                            <li><a class="arrow-a" href="#">Nam vel est egestas</a></li>
+                        </ul>
+                        <div class="social-media-square" id="facebook"><a href="#" alt="Facebook"><span></span></a></div>
+                        <div class="social-media-square" id="twitter"><a href="#" alt="Twitter"><span></span></a></div>
+                        <div class="social-media-square" id="youtube"><a href="#" alt="Youtube"><span></span></a></div>
+                        <div class="social-media-square" id="instagram"><a href="#" alt="Instagram"><span></span></a></div>
+                    </div>
+                    <div class="flex-4">
+                        <ul>
+                            <li>
+                                <h3>Heading</h3>
+                            </li>
+                            <li><a class="arrow-a" href="#">Donec et risus rutrum</a></li>
+                            <li><a class="arrow-a" href="#">In consequat est elementum</a></li>
+                            <li><a class="arrow-a" href="#">Nullam bibendum odio vel enim consequat</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="row-nav-flex">
+                    <div class="flex-3">
+                        <ul>
+                            <li>
+                                <h3>Heading</h3>
+                            </li>
+                            <li><a class="arrow-a" href="#">Phasellus a sem pharetra</a></li>
+                            <li><a class="arrow-a" href="#">Aliquam quis tortor suscipit</a></li>
+                            <li><a class="arrow-a" href="#">Fusce eu magna fringilla</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex-3">
+                        <ul>
+                            <li>
+                                <h3>Heading</h3>
+                            </li>
+                            <li><a class="arrow-a" href="#">Cras eu elit varius</a></li>
+                            <li><a class="arrow-a" href="#">Quisque in odio rhoncus</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex-4">
+                        <ul>
+                            <li>
+                                <h3>Language</h3>
+                            </li>
+                            <li>
+                                <form action="/set-language/" method="post">
+                                    <select name='language'>
+                                        <option value='en' selected>English</option>
+                                        <option value='pt'>Português</option>
+                                    </select>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <div id="bottom">
+                <nav id="left-bottom">
                     <ul>
                         <li><a href="#">Lorem ipsum</a></li>
                         <li><a href="#">Curabitur iaculis</a></li>
@@ -349,9 +428,16 @@
                         <li><a href="#">Maecenas commodo</a></li>
                     </ul>
                 </nav>
-
-                <div id="logo-bottom-footer">Made in Somewhere</div>
+                <section id="made-in">
+                    <p>Made in Somewhere</p>
+                    <div id="flag"></div>
+                </section>
             </div>
+
+            <!-- <div id="logo-top-footer">Company</div>
+
+
+            </div> -->
         </footer>
     </div>
 </body>

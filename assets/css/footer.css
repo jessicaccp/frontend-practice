@@ -1,0 +1,69 @@
+div#bottom {
+   position: relative;
+   height: 171px;
+   background-color: tomato;
+   font-size: 0.875rem;
+   font-weight: bold;
+   overflow: hidden;
+}
+
+nav#left-bottom {
+   position: absolute;
+   left: 0;
+}
+
+nav#left-bottom li {
+   float: left;
+   padding-left: 10px;
+}
+
+nav#left-bottom li:first-child {
+   padding-left: 0;
+}
+
+section#made-in p {
+   position: absolute;
+   right: 45px;
+}
+
+div#flag {
+   position: absolute;
+   right: 0;
+   width: 45px;
+   height: 21px;
+   background-color: black;
+}
+
+div#nav-flex {
+   position: relative;
+   height: 352px;
+   background-color: chocolate;
+   overflow: hidden;
+   font-size: 1rem;
+}
+
+div#nav-flex h3 {
+   font-size: 1rem;
+}
+
+section.row-nav-flex {
+   display: flex;
+   width: 100%;
+   height: 50%;
+}
+
+div#logo-footer {
+   position: relative;
+   height: 253px;
+   background-color: cornflowerblue;
+   overflow: hidden;
+   font-size: 3.7rem;
+   /* line-height: 2.8rem; */
+}
+
+#logo-footer div {
+   width: 188px;
+   height: 45px;
+   /* background-color: black;
+   color: white; */
+}
