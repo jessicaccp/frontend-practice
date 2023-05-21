@@ -15,6 +15,9 @@
     <link href="assets/css/default.css" rel="stylesheet">
     <link href="assets/css/header.css" rel="stylesheet">
     <link href="assets/css/footer.css" rel="stylesheet">
+    <link href="assets/css/containers.css" rel="stylesheet">
+    <link href="assets/css/color.css" rel="stylesheet">
+    <link href="assets/css/font.css" rel="stylesheet">
 
     <!-- <link href="assets/css/default.css" rel="stylesheet" />
     <link href="assets/css/max1599.css" rel="stylesheet" />
@@ -47,17 +50,19 @@
     <!-- / -->
 
     <!-- show hidden nav when click on button -->
-    <script>
-        var prevScrollpos = window.pageYOffset;
-        stickyNavId = "sticky";
-        window.onscroll = function () {
-            var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                document.getElementById(stickyNavId).style.top = "-2px";
-            } else {
-                document.getElementById(stickyNavId).style.top = "-68px";
+    <script type="text/javascript">
+        function toggle_div() {
+            var hidden_nav = document.getElementById("hidden");
+            var styleElem = document.head.appendChild(document.createElement("style"));
+
+            if (hidden_nav.style.display == "block") {
+                hidden_nav.style.display = "none";
+                styleElem.innerHTML = 'nav#left-top button::after {content: " +";}';
             }
-            prevScrollpos = currentScrollPos;
+            else {
+                hidden_nav.style.display = "block";
+                styleElem.innerHTML = 'nav#left-top button::after {content: " -";}';
+            }
         }
     </script>
     <!-- / -->
@@ -149,7 +154,7 @@
                             <li><a href="#">Another Page</a></li>
                             <li><a href="#">One More Page</a></li>
                             <li><a href="#">Another What?</a></li>
-                            <li><a href="#">Current Page</a></li>
+                            <li><a href="#" class="current">Current Page</a></li>
                             <li><a href="#">Another Page</a></li>
                             <li><a href="#">Only One More Page</a></li><br>
                         </ul>
@@ -209,7 +214,7 @@
 
         <nav id="sticky">
             <ul class="y-center">
-                <li><a href="#">Current Page</a></li>
+                <li><a href="#" class="current">Current Page</a></li>
                 <li><a href="#">Page</a></li>
                 <li><a href="#">Page</a></li>
             </ul>
@@ -244,12 +249,12 @@
                     a. Duis sem sem, venenatis in sapien in, euismod sollicitudin felis. Donec rutrum ultrices.</p>
             </section>
 
-            <!-- <figure>
+            <figure>
                 <video poster="assets/img/video1.webp" controls="true" autoplay="false" preload="metadata">
                     <source src="#">
                 </video>
                 <figcaption>Aliquam vel commodo enim, id</figcaption>
-            </figure> -->
+            </figure>
 
             <section class="text-section">
                 <h2>Aenean id elit ligula. In at sagittis magna. Nullam est neque, posuere eu venenatis in, blandit eu
@@ -433,11 +438,6 @@
                     <div id="flag"></div>
                 </section>
             </div>
-
-            <!-- <div id="logo-top-footer">Company</div>
-
-
-            </div> -->
         </footer>
     </div>
 </body>

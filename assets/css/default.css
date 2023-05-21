@@ -6,14 +6,12 @@
 }
 
 body {
-   background-color: gray;
-   font-family: sans-serif;
    overflow-x: hidden;
+   width: 100vw;
+   height: 100vh;
 }
 
 #main-container {
-   background-color: white;
-   color: black;
    max-width: 1600px;
    width: calc(100vw - calc(100vw - 100%));
    margin: 0 auto;
@@ -25,19 +23,12 @@ span {
    display: block;
 }
 
-a:link,
-a:visited,
-a:hover {
-   text-decoration: none;
-}
-
 ul {
    list-style: none;
 }
 
 button {
    background: none;
-   font-family: sans-serif;
 }
 
 .x-center {
@@ -76,4 +67,18 @@ button {
 .flex-4 {
    display: flex;
    flex: 4;
+}
+
+video {
+   max-width: 800px;
+   width: 50vw;
+   display: block;
+   margin: 0 auto;
+}
+
+figcaption {
+   max-width: 800px;
+   width: 50vw;
+   margin: 0 auto;
+   padding: 12px;
 }

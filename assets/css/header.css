@@ -1,7 +1,6 @@
 div#top {
    position: relative;
    height: 70px;
-   background-color: tomato;
    font-size: 1.25rem;
    overflow: hidden;
 }
@@ -15,13 +14,7 @@ div#top {
 div#logo-top {
    width: 60px;
    height: 28px;
-   background-color: black;
-   color: white;
    position: absolute;
-}
-
-div#logo-top a {
-   color: white;
 }
 
 div#logo-top p {
@@ -45,6 +38,7 @@ nav#left-top li:first-child {
 
 nav#left-top button {
    font-size: 1.25rem;
+   cursor: pointer;
 }
 
 nav#left-top button::after {
@@ -69,7 +63,6 @@ nav#right-top li:last-child {
 div#hidden {
    position: relative;
    height: 350px;
-   background-color: chocolate;
    font-size: 1.25rem;
    display: block;
    overflow: hidden;
@@ -102,11 +95,11 @@ nav#sticky {
    position: sticky;
    top: -2px;
    height: 68px;
-   background-color: cornflowerblue;
    font-size: 1rem;
-   border-top: 2px solid black;
    z-index: 3;
    overflow: hidden;
+   border-top-width: 2px;
+   border-top-style: solid;
 
    /* smooth scroll */
    -webkit-transition: all 0.5s ease;

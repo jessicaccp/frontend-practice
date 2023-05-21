@@ -1,0 +1,51 @@
+body,
+button,
+input,
+select {
+   font-family: "Outfit", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+   font-size: 1.25rem;
+   line-height: 1.5;
+   font-weight: normal;
+   text-decoration: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+   text-decoration: none;
+}
+
+div#top,
+div#top button,
+nav#sticky,
+input#submit {
+   font-weight: bold;
+}
+
+nav#right-top li:last-child,
+nav#sticky {
+   font-size: 1rem;
+}
+
+h2 {
+   font-size: 1.875rem;
+   line-height: 1.4;
+}
+
+figcaption,
+select,
+div#bottom {
+   font-size: 0.875rem;
+   font-weight: bold;
+}
+
+div#logo-footer {
+   font-size: 3.7rem;
+   font-weight: bold;
+   /* line-height: 0.7; */
+}
+
+footer h3 {
+   font-size: 1.25rem;
+}
