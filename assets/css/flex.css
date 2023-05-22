@@ -1,0 +1,158 @@
+body {
+   width: calc(100vw - calc(100vw - 100%));
+   height: auto;
+}
+
+#main-container {
+   display: flex;
+   flex-direction: column;
+   max-width: 100rem;
+   height: auto;
+   margin: auto;
+}
+
+header {
+   display: flex;
+   flex-direction: column;
+   max-width: 100%;
+   height: auto;
+}
+
+div#top {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   max-width: 100%;
+   height: 4.375rem;
+   gap: 1rem;
+   padding: 0 1rem;
+}
+
+div#logo-top span {
+   display: flex;
+   width: 3.75rem;
+   height: 1.75rem;
+}
+
+div#logo-top p {
+   height: auto;
+   width: auto;
+   margin: auto;
+}
+
+nav#left-top {
+   width: auto;
+   height: auto;
+   margin-right: auto;
+}
+
+nav#left-top ul {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   width: auto;
+   height: auto;
+   gap: 1rem;
+}
+
+nav#right-top {
+   width: auto;
+   height: auto;
+   margin-left: auto;
+}
+
+nav#right-top ul {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   width: auto;
+   height: auto;
+   gap: 1rem;
+}
+
+div#hidden {
+   display: none;
+   flex-direction: column;
+   justify-content: center;
+   max-width: 100%;
+   height: 21.875rem;
+   padding: 0 2rem;
+}
+
+section.row-hidden {
+   display: flex;
+   flex-direction: column;
+   width: auto;
+   height: auto;
+   padding: 1rem 0;
+}
+
+section.row-hidden h2 {
+   width: auto;
+   height: auto;
+   padding-bottom: 0.5rem;
+}
+
+section.row-hidden ul {
+   display: flex;
+   flex-direction: row;
+   width: auto;
+   height: auto;
+   gap: 1rem;
+}
+
+nav#sticky {
+   position: sticky;
+   top: -0.125rem;
+   border-top-width: 0.125rem;
+   border-top-style: solid;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   max-width: 100%;
+   height: 4.25rem;
+   padding: 0 1rem;
+   margin-bottom: auto;
+   z-index: 10;
+
+   /* smooth scroll */
+   -webkit-transition: all 0.5s ease;
+   -moz-transition: position 10s;
+   -ms-transition: position 10s;
+   -o-transition: position 10s;
+   transition: all 0.5s ease;
+   animation: smoothScroll 1s forwards;
+}
+
+@keyframes smoothScroll {
+   0% {
+       transform: translateY(-4.25rem);
+   }
+
+   100% {
+       transform: translateY(-0.125rem);
+   }
+}
+
+nav#sticky ul {
+   display: flex;
+   flex-direction: row;
+   width: auto;
+   height: auto;
+   gap: 1rem;
+}
+
+section#large-img {
+   display: flex;
+   max-width: 100%;
+   height: calc(100vh - 8.625rem);
+   margin: 0 1rem;
+   z-index: 1;
+}
+
+h1#large-title {
+   width: auto;
+   height: auto;
+   margin: auto;
+   z-index: 2;
+}

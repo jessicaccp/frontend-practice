@@ -1,3 +1,8 @@
+*::selection {
+   background: #0000F5;
+   color: #f3f3f3;
+}
+
 body {
    background-color: #f3f3f3;
    color: #333333;
@@ -62,6 +67,10 @@ nav#sticky {
 }
 
 /* insert large title settings */
+h1#large-title {
+   border-color: #992400;
+   color: #992400;
+}
 
 main a:link,
 main a:visited,

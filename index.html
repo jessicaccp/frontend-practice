@@ -4,6 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Outfit font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap" rel="stylesheet">
+    <!-- / -->
 
     <!-- May be changed -->
     <title>Title | Company</title>
@@ -12,79 +19,73 @@
     <meta name="author" content="Jessica Patricio">
     <!-- / -->
 
-    <link href="assets/css/default.css" rel="stylesheet">
-    <link href="assets/css/header.css" rel="stylesheet">
-    <link href="assets/css/footer.css" rel="stylesheet">
-    <link href="assets/css/containers.css" rel="stylesheet">
-    <link href="assets/css/color.css" rel="stylesheet">
-    <link href="assets/css/font.css" rel="stylesheet">
-
-    <!-- <link href="assets/css/default.css" rel="stylesheet" />
-    <link href="assets/css/max1599.css" rel="stylesheet" />
-    <link href="assets/css/max1279.css" rel="stylesheet" />
-    <link href="assets/css/max1123.css" rel="stylesheet" />
-    <link href="assets/css/max1023.css" rel="stylesheet" />
-    <link href="assets/css/max767.css" rel="stylesheet" />
-    <link href="assets/css/max419.css" rel="stylesheet" />
-    <link href="assets/css/max215.css" rel="stylesheet" />
-    <link href="assets/css/max129.css" rel="stylesheet" /> -->
-
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap" rel="stylesheet">
-
-    <!-- sticky nav hides when scroll down/shows when scroll up  -->
-    <script>
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function (id) {
-            var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                document.getElementById(id).style.top = "-2px";
-            } else {
-                document.getElementById(id).style.top = "-68px";
-            }
-            prevScrollpos = currentScrollPos;
-        }
-    </script>
+    <!-- Production css file, containing all develop files -->
+    <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
     <!-- / -->
 
-    <!-- show hidden nav when click on button -->
+    <!-- Development css files -->
+    <link href="assets/css/template.css" rel="stylesheet">
+    <link href="assets/css/color.css" rel="stylesheet">
+    <link href="assets/css/font.css" rel="stylesheet">
+    <link href="assets/css/image.css" rel="stylesheet">
+    <link href="assets/css/flex.css" rel="stylesheet">
+
+    <!-- / -->
+
+    <!-- Shows sticky nav when scrollup and hides when scroll down  -->
+    <!-- <script type="text/javascript">
+        var prevScrollPos = window.pageYOffset;
+        var id = "sticky";
+
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+
+            if (prevScrollPos > currentScrollPos) {
+                document.getElementById(id).style.top = "-2px";
+            }
+            else {
+                document.getElementById(id).style.top = "-68px";
+            }
+
+            prevScrollpos = currentScrollPos;
+        }
+    </script> -->
+    <!-- / -->
+
+    <!-- Shows/hides hidden div and changes button's content -->
     <script type="text/javascript">
-        function toggle_div() {
-            var hidden_nav = document.getElementById("hidden");
+        function toggleDiv() {
+            var hiddenDiv = document.getElementById("hidden");
             var styleElem = document.head.appendChild(document.createElement("style"));
 
-            if (hidden_nav.style.display == "block") {
-                hidden_nav.style.display = "none";
+            if (hiddenDiv.style.display == "flex") {
+                hiddenDiv.style.display = "none";
                 styleElem.innerHTML = 'nav#left-top button::after {content: " +";}';
             }
             else {
-                hidden_nav.style.display = "block";
+                hiddenDiv.style.display = "flex";
                 styleElem.innerHTML = 'nav#left-top button::after {content: " -";}';
             }
         }
     </script>
     <!-- / -->
-
 </head>
 
 <body>
     <div id="main-container">
-        <!-- div top, div hidden -->
         <header>
-            <!-- section logo, nav left, nav right -->
             <div id="top">
-                <div id="logo-top" class="y-center">
+                <div id="logo-top">
                     <a href="#" title="Company Homepage">
                         <span>
-                            <p class="xy-center">
+                            <p>
                                 Logo
                             </p>
                         </span>
                     </a>
                 </div>
-                <nav id="left-top" class="y-center">
+
+                <nav id="left-top">
                     <ul>
                         <li>
                             <a href="#">
@@ -122,13 +123,14 @@
                             </a>
                         </li>
                         <li>
-                            <button onclick="javascript:toggle_div()">
+                            <button onclick="javascript:toggleDiv()">
                                 More
                             </button>
                         </li>
                     </ul>
                 </nav>
-                <nav id="right-top" class="y-center">
+
+                <nav id="right-top">
                     <ul>
                         <li>
                             <a href="#">
@@ -144,7 +146,6 @@
                 </nav>
             </div>
 
-            <!-- toggle menu -->
             <div id="hidden">
                 <section class="row-hidden">
                     <h2>More nice pages:</h2>
@@ -160,6 +161,7 @@
                         </ul>
                     </nav>
                 </section>
+
                 <section class="row-hidden">
                     <h2>Even more nice pages:</h2>
                     <div class="x-scroll">
@@ -213,27 +215,43 @@
         </header>
 
         <nav id="sticky">
-            <ul class="y-center">
-                <li><a href="#" class="current">Current Page</a></li>
-                <li><a href="#">Page</a></li>
-                <li><a href="#">Page</a></li>
+            <ul>
+                <li>
+                    <a href="#" class="current">
+                        Current Page
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Page
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Page
+                    </a>
+                </li>
             </ul>
         </nav>
-        <!-- revised until here -->
 
         <section id="large-img">
-            <h1 id="large-title">Company</h1>
+                <h1 id="large-title">
+                    Company
+                </h1>
         </section>
 
         <main>
             <section class="text-section">
-                <h2>Lorem ipsum <a href="#">dolor</a> sit <a href="#">amet</a>, consectetur <a href="#">adipiscing</a>
+                <h2>
+                    Lorem ipsum <a href="#">dolor</a> sit <a href="#">amet</a>, consectetur <a href="#">adipiscing</a>
                     elit. In vel metus pulvinar nisi dapibus aliquam. In facilisis elit eleifend, ultricies orci at,
                     rutrum nisl. Nulla facilisi.
                 </h2>
-                <p>Pellentesque sed velit a magna bibendum molestie. Lorem ipsum dolor sit amet, consectetur adipiscing
+                <p>
+                    Pellentesque sed velit a magna bibendum molestie. Lorem ipsum dolor sit amet, consectetur adipiscing
                     elit. Suspendisse eleifend risus eu elit auctor, malesuada tincidunt ipsum ullamcorper. Sed in
-                    aliquet nisl. Donec dignissim ullamcorper.</p>
+                    aliquet nisl. Donec dignissim ullamcorper.
+                </p>
             </section>
 
             <div id="yellow-container">
@@ -243,28 +261,39 @@
             </div>
 
             <section class="text-section">
-                <h2>Etiam tempus lacus quam, in congue libero porttitor quis. Nam dignissim nulla quis neque aliquet
-                    pharetra. Curabitur dictum est.</h2>
-                <p>Integer fringilla laoreet arcu vitae malesuada. Aenean lacinia leo justo, ut accumsan purus porttitor
-                    a. Duis sem sem, venenatis in sapien in, euismod sollicitudin felis. Donec rutrum ultrices.</p>
+                <h2>
+                    Etiam tempus lacus quam, in congue libero porttitor quis. Nam dignissim nulla quis neque aliquet
+                    pharetra. Curabitur dictum est.
+                </h2>
+                <p>
+                    Integer fringilla laoreet arcu vitae malesuada. Aenean lacinia leo justo, ut accumsan purus
+                    porttitor a. Duis sem sem, venenatis in sapien in, euismod sollicitudin felis. Donec rutrum
+                    ultrices.
+                </p>
             </section>
 
             <figure>
                 <video poster="assets/img/video1.webp" controls="true" autoplay="false" preload="metadata">
                     <source src="#">
                 </video>
-                <figcaption>Aliquam vel commodo enim, id</figcaption>
+                <figcaption>
+                    Aliquam vel commodo enim, id
+                </figcaption>
             </figure>
 
             <section class="text-section">
-                <h2>Aenean id elit ligula. In at sagittis magna. Nullam est neque, posuere eu venenatis in, blandit eu
-                    velit. Etiam mattis congue augue ac rhoncus.</h2>
-                <p>Donec eu blandit mauris, quis tincidunt lorem. Fusce tellus nulla, vehicula non ornare vel, hendrerit
-                    non tellus. Aenean tempor tristique ligula, ut ultrices ligula laoreet in. Duis nulla massa,
-                    placerat id tellus quis, sagittis ultrices nulla. Maecenas viverra tempor libero, in mattis velit
-                    dictum vel. Maecenas semper orci quam, nec cursus ligula sodales consequat. Nunc at nisl elit. Donec
-                    at condimentum elit, sit amet venenatis est. Pellentesque a gravida eros. Sed vestibulum lectus
-                    mauris, non.</p>
+                <h2>
+                    Aenean id elit ligula. In at sagittis magna. Nullam est neque, posuere eu venenatis in, blandit eu
+                    velit. Etiam mattis congue augue ac rhoncus.
+                </h2>
+                <p>
+                    Donec eu blandit mauris, quis tincidunt lorem. Fusce tellus nulla, vehicula non ornare vel,
+                    hendrerit non tellus. Aenean tempor tristique ligula, ut ultrices ligula laoreet in. Duis nulla
+                    massa, placerat id tellus quis, sagittis ultrices nulla. Maecenas viverra tempor libero, in mattis
+                    velit dictum vel. Maecenas semper orci quam, nec cursus ligula sodales consequat. Nunc at nisl elit.
+                    Donec at condimentum elit, sit amet venenatis est. Pellentesque a gravida eros. Sed vestibulum
+                    lectus mauris, non.
+                </p>
             </section>
 
             <div id="green-container">
@@ -275,9 +304,12 @@
             </div>
 
             <section class="text-section">
-                <h2>Quisque eget arcu vel mauris euismod finibus. Praesent sagittis, tortor non sagittis imperdiet, ex
-                    lorem feugiat massa, et rutrum dui erat vitae lacus. Curabitur.</h2>
-                <p>Nunc laoreet sollicitudin elit, vel aliquet ipsum. Nulla accumsan dolor neque, id egestas ipsum
+                <h2>
+                    Quisque eget arcu vel mauris euismod finibus. Praesent sagittis, tortor non sagittis imperdiet, ex
+                    lorem feugiat massa, et rutrum dui erat vitae lacus. Curabitur.
+                </h2>
+                <p>
+                    Nunc laoreet sollicitudin elit, vel aliquet ipsum. Nulla accumsan dolor neque, id egestas ipsum
                     tincidunt vel. Suspendisse ligula dolor, ullamcorper non scelerisque eu, placerat ut sem. Aenean
                     lacinia, risus vel dictum aliquam, ipsum ipsum rhoncus metus, vel pretium elit neque vel lorem.
                     Proin in quam felis. Duis pulvinar dolor eget lorem euismod, sit amet volutpat erat commodo. Quisque
@@ -290,14 +322,20 @@
             </div>
 
             <section class="text-section">
-                <h2>Sed varius mi sit amet neque gravida, quis auctor elit tristique. Aenean dictum turpis velit.</h2>
-                <p>Nulla viverra vehicula ex, vel porta felis. Praesent vitae sagittis purus, non blandit neque. Sed
+                <h2>
+                    Sed varius mi sit amet neque gravida, quis auctor elit tristique. Aenean dictum turpis velit.
+                </h2>
+                <p>
+                    Nulla viverra vehicula ex, vel porta felis. Praesent vitae sagittis purus, non blandit neque. Sed
                     bibendum sollicitudin metus vel egestas. Morbi elementum ut ipsum maximus hendrerit. Donec tristique
-                    lorem auctor, imperdiet.</p>
-                <p>Fusce sed pretium justo, in placerat lectus. Donec faucibus mi sollicitudin est mattis, id efficitur
+                    lorem auctor, imperdiet.
+                </p>
+                <p>
+                    Fusce sed pretium justo, in placerat lectus. Donec faucibus mi sollicitudin est mattis, id efficitur
                     nisi consequat. Pellentesque tempus suscipit convallis. Vestibulum nec augue nibh. Suspendisse
                     feugiat lacus eu lacus lobortis, nec egestas orci malesuada. Aenean porttitor, ex a dignissim
-                    aliquam, arcu ante.</p>
+                    aliquam, arcu ante.
+                </p>
             </section>
 
             <div id="purple-container">
@@ -307,12 +345,14 @@
             </div>
 
             <section class="text-section">
-                <h2>Praesent lobortis magna id laoreet aliquet. Vestibulum cursus condimentum dui. Suspendisse nec eros
+                <h2>
+                    Praesent lobortis magna id laoreet aliquet. Vestibulum cursus condimentum dui. Suspendisse nec eros
                     ut libero finibus hendrerit eu non massa. Nulla nec semper arcu. Proin non turpis eu est posuere
                     rutrum vel.
                 </h2>
-                <p>Cras vulputate, massa eu eleifend consectetur, neque metus tempus ante, quis vestibulum felis nibh at
-                    mi. Integer placerat sit amet arcu id pretium. Mauris dapibus id leo sodales condimentum. Quisque
+                <p>
+                    Cras vulputate, massa eu eleifend consectetur, neque metus tempus ante, quis vestibulum felis nibh
+                    at mi. Integer placerat sit amet arcu id pretium. Mauris dapibus id leo sodales condimentum. Quisque
                     lobortis pretium viverra. Aenean facilisis est eu neque maximus varius. Vivamus convallis est sit
                     amet rhoncus imperdiet. Curabitur tristique, leo vel volutpat vestibulum, mauris odio accumsan
                     lacus, dignissim hendrerit sem nisi efficitur orci. Pellentesque ornare diam sed lectus maximus, a
@@ -324,11 +364,14 @@
                 <div id="blue-block"></div>
                 <div id="img-left-blue"></div>
                 <div id="text-right-blue">
-                    <h2>Mauris sagittis mi sed sem lacinia laoreet. Morbi nisl felis, ornare in quam a, venenatis
+                    <h2>
+                        Mauris sagittis mi sed sem lacinia laoreet. Morbi nisl felis, ornare in quam a, venenatis
                         fermentum ipsum. Maecenas venenatis posuere arcu vitae sollicitudin. Mauris porta dictum
                         hendrerit. Aenean ultrices.
                         <br><br>
-                        <a href="#">See some nice page </a>
+                        <a href="#">
+                            See some nice page
+                        </a>
                     </h2>
                 </div>
             </div>
@@ -342,6 +385,7 @@
                     </p>
                 </div>
             </div>
+
             <div id="nav-flex">
                 <section class="row-nav-flex">
                     <div class="flex-3">
@@ -352,8 +396,9 @@
                                 </h3>
                             </li>
                             <li>
-                                <p>Something about why the visitor should insert their email address below. And some more
-                                    text. And some more.</p>
+                                <p>
+                                    Something about why the visitor should insert their email address below. And some
+                                    more text. And some more.</p>
                             </li>
                             <li>
                                 <form method="get" name="newsletter-email">
@@ -363,58 +408,134 @@
                             </li>
                         </ul>
                     </div>
+
                     <div class="flex-3">
                         <ul>
-                            <li><a class="arrow-a" href="#">Lorem ipsum dolor sit amet</a></li>
-                            <li><a class="arrow-a" href="#">Vivamus a ligula tempor</a></li>
-                            <li><a class="arrow-a" href="#">Nam vel est egestas</a></li>
+                            <li>
+                                <a class="arrow-a" href="#">
+                                    Lorem ipsum dolor sit amet
+                                </a>
+                            </li>
+                            <li>
+                                <a class="arrow-a" href="#">
+                                    Vivamus a ligula tempor
+                                </a>
+                            </li>
+                            <li>
+                                <a class="arrow-a" href="#">
+                                    Nam vel est egestas
+                                </a>
+                            </li>
                         </ul>
-                        <div class="social-media-square" id="facebook"><a href="#" alt="Facebook"><span></span></a></div>
-                        <div class="social-media-square" id="twitter"><a href="#" alt="Twitter"><span></span></a></div>
-                        <div class="social-media-square" id="youtube"><a href="#" alt="Youtube"><span></span></a></div>
-                        <div class="social-media-square" id="instagram"><a href="#" alt="Instagram"><span></span></a></div>
+
+                        <div class="social-media-square" id="facebook">
+                            <a href="#" alt="Facebook">
+                                <span></span>
+                            </a>
+                        </div>
+                        <div class="social-media-square" id="twitter">
+                            <a href="#" alt="Twitter">
+                                <span></span>
+                            </a>
+                        </div>
+                        <div class="social-media-square" id="youtube">
+                            <a href="#" alt="Youtube">
+                                <span></span>
+                            </a>
+                        </div>
+                        <div class="social-media-square" id="instagram">
+                            <a href="#" alt="Instagram">
+                                <span></span>
+                            </a>
+                        </div>
                     </div>
+
                     <div class="flex-4">
                         <ul>
                             <li>
-                                <h3>Heading</h3>
+                                <h3>
+                                    Heading
+                                </h3>
                             </li>
-                            <li><a class="arrow-a" href="#">Donec et risus rutrum</a></li>
-                            <li><a class="arrow-a" href="#">In consequat est elementum</a></li>
-                            <li><a class="arrow-a" href="#">Nullam bibendum odio vel enim consequat</a></li>
+                            <li>
+                                <a class="arrow-a" href="#">
+                                    Donec et risus rutrum
+                                </a>
+                            </li>
+                            <li>
+                                <a class="arrow-a" href="#">
+                                    In consequat est elementum
+                                </a>
+                            </li>
+                            <li>
+                                <a class="arrow-a" href="#">
+                                    Nullam bibendum odio vel enim consequat
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </section>
+
                 <section class="row-nav-flex">
                     <div class="flex-3">
                         <ul>
                             <li>
                                 <h3>Heading</h3>
                             </li>
-                            <li><a class="arrow-a" href="#">Phasellus a sem pharetra</a></li>
-                            <li><a class="arrow-a" href="#">Aliquam quis tortor suscipit</a></li>
-                            <li><a class="arrow-a" href="#">Fusce eu magna fringilla</a></li>
+                            <li>
+                                <a class="arrow-a" href="#">
+                                    Phasellus a sem pharetra
+                                </a>
+                            </li>
+                            <li>
+                                <a class="arrow-a" href="#">
+                                    Aliquam quis tortor suscipit
+                                </a>
+                            </li>
+                            <li>
+                                <a class="arrow-a" href="#">
+                                    Fusce eu magna fringilla
+                                </a>
+                            </li>
                         </ul>
                     </div>
+
                     <div class="flex-3">
                         <ul>
                             <li>
-                                <h3>Heading</h3>
+                                <h3>
+                                    Heading
+                                </h3>
                             </li>
-                            <li><a class="arrow-a" href="#">Cras eu elit varius</a></li>
-                            <li><a class="arrow-a" href="#">Quisque in odio rhoncus</a></li>
+                            <li>
+                                <a class="arrow-a" href="#">
+                                    Cras eu elit varius
+                                </a>
+                            </li>
+                            <li>
+                                <a class="arrow-a" href="#">
+                                    Quisque in odio rhoncus
+                                </a>
+                            </li>
                         </ul>
                     </div>
+
                     <div class="flex-4">
                         <ul>
                             <li>
-                                <h3>Language</h3>
+                                <h3>
+                                    Language
+                                </h3>
                             </li>
                             <li>
                                 <form action="/set-language/" method="post">
                                     <select name='language'>
-                                        <option value='en' selected>English</option>
-                                        <option value='pt'>Português</option>
+                                        <option value='en' selected>
+                                            English
+                                        </option>
+                                        <option value='pt'>
+                                            Português
+                                        </option>
                                     </select>
                                 </form>
                             </li>
@@ -422,19 +543,47 @@
                     </div>
                 </section>
             </div>
-            <div id="bottom">
+
+            <div id="bottom" >
                 <nav id="left-bottom">
                     <ul>
-                        <li><a href="#">Lorem ipsum</a></li>
-                        <li><a href="#">Curabitur iaculis</a></li>
-                        <li><a href="#">Integer faucibus</a></li>
-                        <li><a href="#">Curabitur ornare</a></li>
-                        <li><a href="#">Sed malesuada</a></li>
-                        <li><a href="#">Maecenas commodo</a></li>
+                        <li>
+                            <a href="#">
+                                Lorem ipsum
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Curabitur iaculis
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Integer faucibus
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Curabitur ornare
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Sed malesuada
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Maecenas commodo
+                            </a>
+                        </li>
                     </ul>
                 </nav>
+
                 <section id="made-in">
-                    <p>Made in Somewhere</p>
+                    <p>
+                        Made in Somewhere
+                    </p>
                     <div id="flag"></div>
                 </section>
             </div>

@@ -23,6 +23,11 @@ input#submit {
    font-weight: bold;
 }
 
+div#logo-top p {
+   font-size: 1rem;
+   text-transform: uppercase;
+}
+
 nav#right-top li:last-child,
 nav#sticky {
    font-size: 1rem;
@@ -31,6 +36,13 @@ nav#sticky {
 h2 {
    font-size: 1.875rem;
    line-height: 1.4;
+}
+
+h1#large-title {
+   font-size: 5.6rem;
+   font-weight: bold;
+   line-height: 0.8;
+   letter-spacing: -0.5rem;
 }
 
 figcaption,
@@ -43,7 +55,6 @@ div#bottom {
 div#logo-footer {
    font-size: 3.7rem;
    font-weight: bold;
-   /* line-height: 0.7; */
 }
 
 footer h3 {

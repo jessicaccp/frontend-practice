@@ -1,0 +1,59 @@
+section#large-img {
+   background-image: url(../img/header4.webp);
+   background-size: cover;
+   background-position: 50% 50%;
+}
+
+div#img-left-yellow {
+   background-image: url(../img/yellow1.webp);
+   background-size: cover;
+   background-position: 50% 50%;
+}
+
+div#img-right-yellow {
+   background-image: url(../img/yellow2.webp);
+   background-size: cover;
+   background-position: 50% 50%;
+}
+
+div#img-left-top-green {
+   background-image: url(../img/green2.webp);
+   background-size: cover;
+   background-position: 50% 50%;
+}
+
+div#img-left-bottom-green {
+   background-image: url(../img/green3.webp);
+   background-size: cover;
+   background-position: 50% 50%;
+}
+
+div#img-right-green {
+   background-image: url(../img/green1.webp);
+   background-size: cover;
+   background-position: 50% 50%;
+}
+
+div#img-center-colorless {
+   background-image: url(../img/colorless1.webp);
+   background-size: cover;
+   background-position: 50% 50%;
+}
+
+div#img-left-purple {
+   background-image: url(../img/purple1.webp);
+   background-size: cover;
+   background-position: 50% 50%;
+}
+
+div#img-right-purple {
+   background-image: url(../img/purple2.webp);
+   background-size: cover;
+   background-position: 50% 50%;
+}
+
+div#img-left-blue {
+   background-image: url(../img/blue1.webp);
+   background-size: cover;
+   background-position: 50% 50%;
+}
