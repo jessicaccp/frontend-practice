@@ -25,7 +25,14 @@ input#submit {
 
 div#logo-top p {
    font-size: 1rem;
+   line-height: 1rem;
    text-transform: uppercase;
+}
+
+nav#left-top li,
+nav#left-top button {
+   line-height: 1.5;
+   font-size: 1.25rem;
 }
 
 nav#right-top li:last-child,

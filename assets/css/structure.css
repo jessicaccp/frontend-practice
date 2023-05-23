@@ -1,0 +1,404 @@
+.child {
+   min-width: 0;
+}
+
+ul {
+   list-style: none;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   box-sizing: border-box;
+}
+
+body {
+   width: calc(100vw - calc(100vw - 100%));
+}
+
+div#main-container {
+   max-width: 100rem;
+   width: calc(100vw - calc(100vw - 100%));
+   height: fit-content;
+}
+
+header {
+   max-width: calc(100vw - calc(100vw - 100%));
+   width: 100%;
+}
+
+div#top {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 1rem;
+   max-width: inherit;
+   width: inherit;
+   height: 4.375rem;
+}
+
+div#logo-top {
+   min-width: 0;
+   width: 3.75rem;
+   height: 1.75rem;
+}
+
+div#logo-top a {
+   width: inherit;
+   height: inherit;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+div#logo-top p {
+   min-width: 0;
+   width: fit-content;
+   height: fit-content;
+}
+
+nav#left-top {
+   min-width: 0;
+   width: fit-content;
+   height: fit-content;
+   margin-right: auto;
+}
+
+nav#left-top ul {
+   display: flex;
+   flex-direction: row;
+   width: inherit;
+   align-items: center;
+   height: fit-content;
+   gap: 1rem;
+}
+
+nav#left-top li {
+   min-width: 0;
+   width: fit-content;
+   height: fit-content;
+}
+
+nav#left-top a {
+   width: inherit;
+   height: inherit;
+}
+
+nav#left-top button {
+   width: fit-content;
+   height: fit-content;
+}
+
+nav#left-top button::after {
+   content: " +";
+}
+
+nav#right-top {
+   min-width: 0;
+   width: fit-content;
+   height: fit-content;
+   margin-left: auto;
+}
+
+nav#right-top ul {
+   display: flex;
+   flex-direction: row;
+   gap: 1rem;
+   align-items: center;
+   width: inherit;
+   height: fit-content;
+}
+
+nav#right-top li {
+   min-width: 0;
+   height: fit-content;
+   width: fit-content;
+}
+
+nav#right-top a {
+   height: inherit;
+   width: inherit;
+}
+
+div#hidden {
+   display: none;
+   flex-direction: column;
+   justify-content: space-evenly;
+   max-width: inherit;
+   width: inherit;
+   height: 21.875rem;
+}
+
+div#hidden section {
+   min-width: 0;
+   max-width: inherit;
+   width: inherit;
+   height: fit-content;
+}
+
+div#hidden h2 {
+   max-width: inherit;
+   width: fit-content;
+   height: fit-content;
+}
+
+div#hidden nav {
+   max-width: inherit;
+   width: fit-content;
+   height: fit-content;
+}
+
+div#hidden ul {
+   display: flex;
+   flex-direction: row;
+   gap: 1rem;
+   max-width: inherit;
+   width: inherit;
+   height: inherit;
+}
+
+div#hidden li {
+   min-width: 0;
+   width: fit-content;
+   height: fit-content;
+}
+
+div#hidden a {
+   width: fit-content;
+   height: fit-content;
+}
+
+div#hidden div {
+   max-width: inherit;
+   width: inherit;
+   height: fit-content;
+}
+
+div#hidden div h3 {
+   width: fit-content;
+   height: fit-content;
+}
+
+div#hidden div p {
+   width: fit-content;
+   height: fit-content;
+}
+
+nav#sticky {
+   display: flex;
+   flex: row;
+   align-items: center;
+   position: sticky;
+   top: -0.1rem;
+   max-width: calc(100vw - calc(100vw - 100%));
+   width: 100%;
+   height: 4.25rem;
+   border-top-width: 0.1rem;
+   border-top-style: solid;
+   z-index: 10;
+}
+
+nav#sticky ul {
+   display: flex;
+   flex-direction: row;
+   gap: 1rem;
+   min-width: 0;
+   max-width: inherit;
+   width: inherit;
+   height: fit-content;
+}
+
+nav#sticky li {
+   min-width: 0;
+   width: fit-content;
+   height: fit-content;
+}
+
+nav#sticky a {
+   width: fit-content;
+   height: fit-content;
+}
+
+section#large-img {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   max-width: calc(100vw - calc(100vw - 100%));
+   width: 100%;
+   min-height: calc(100vh - calc(4.375rem + 4.25rem));
+   height: calc(100vh - calc(4.375rem + 4.25rem));
+   z-index: 2;
+}
+
+h1#large-title {
+   min-width: 0;
+   width: fit-content;
+   height: fit-content;
+   z-index: 3;
+}
+
+main {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1rem;
+   max-width: calc(100vw - calc(100vw - 100%));
+   width: 100%;
+   height: fit-content;
+}
+
+section.text-section {
+   min-width: 0;
+   max-width: inherit;
+   width: 50rem;
+   height: fit-content;
+}
+
+section.text-section h2 {
+   max-width: inherit;
+   width: inherit;
+   height: fit-content;
+}
+
+section.text-section a {
+   width: fit-content;
+   height: fit-content;
+}
+
+section.text-section p {
+   max-width: inherit;
+   width: inherit;
+   height: fit-content;
+}
+
+div#yellow-container {
+   min-width: 0;
+   position: relative;
+   max-width: inherit;
+   width: inherit;
+   max-height: 58rem;
+   height: 58vw;
+   z-index: 1;
+}
+
+div#yellow-block {
+   position: absolute;
+   right: 0;
+   left: 42%;
+   width: 58%;
+   height: 100%;
+   z-index: 2;
+}
+
+div#img-left-yellow {
+   position: absolute;
+   left: 8%;
+   right: 50%;
+   top: 14%;
+   bottom: 14%;
+   width: 42%;
+   height: 72%;
+   z-index: 3;
+}
+
+div#img-right-yellow {
+   position: absolute;
+   top: 29%;
+   bottom: 29%;
+   right: 8%;
+   left: 59%;
+   width: 33%;
+   max-height: 33rem;
+   height: 42%;
+   z-index: 4;
+}
+
+figure {
+   min-width: 0;
+   max-width: inherit;
+   width: 50rem;
+   height: fit-content;
+}
+
+figure video {
+   /* min-width: 0; */
+   max-width: inherit;
+   width: 100%;
+   height: auto;
+}
+
+figure video source {
+   /* min-width: 0; */
+   max-width: inherit;
+   width: inherit;
+   height: inherit;
+}
+
+figure figcaption {
+   max-width: inherit;
+   width: fit-content;
+   height: fit-content;
+}
+
+div#green-container {
+   min-width: 0;
+   position: relative;
+   max-width: inherit;
+   width: inherit;
+   max-height: 58rem;
+   height: 58vw;
+   z-index: 1;
+}
+
+div#green-block {
+   position: absolute;
+   right: 42%;
+   left: 0;
+   width: 58%;
+   height: 100%;
+   z-index: 2;
+}
+
+div#img-left-top-green {
+   position: absolute;
+   left: 8%;
+   right: 59%;
+   top: 11%;
+   bottom: 56%;
+   width: 33%;
+   height: 33%;
+   z-index: 3;
+}
+
+div#img-left-bottom-green {
+   position: absolute;
+   left: 8%;
+   right: 59%;
+   top: 56%;
+   bottom: 11%;
+   width: 33%;
+   height: 33%;
+   z-index: 4;
+}
+
+div#img-right-green {
+   position: absolute;
+   left: 50%;
+   right: 8%;
+   top: 22%;
+   bottom: 22%;
+   width: 42%;
+   height: 56%;
+   z-index: 5;
+}
+
+div#colorless-container {
+   min-width: 0;
+   position: relative;
+   max-width: inherit;
+   width: 50rem;
+   height: fit-content;
+   z-index: 1;
+}
