@@ -7,6 +7,7 @@ select {
    line-height: 1.5;
    font-weight: normal;
    text-decoration: none;
+   letter-spacing: -0.04rem;
 }
 
 a:link,
@@ -66,4 +67,68 @@ div#logo-footer {
 
 footer h3 {
    font-size: 1.25rem;
+}
+
+
+/* 1279.008px */
+@media only screen and (max-width: 79.938rem) {
+
+   nav#left-top li,
+   nav#left-top button {
+      font-size: 1rem;
+   }
+
+   nav#right-top a,
+   nav#sticky a {
+      font-size: 0.875rem;
+   }
+
+   div#hidden h2 {
+      font-size: 1.5rem;
+   }
+
+   div#hidden a,
+   div#hidden h3,
+   div#hidden p {
+      font-size: 1rem;
+   }
+
+   div#nav-footer a,
+   div#nav-footer h3,
+   div#nav-footer p,
+   div#nav-footer input {
+      font-size: 1rem;
+   }
+}
+
+/* 1123.008px */
+@media only screen and (max-width: 70.188rem) {
+   body,
+   input,
+   select {
+      font-size: 1rem;
+   }
+
+   h2 {
+      font-size: 1.25rem;
+   }
+
+   nav#left-top li,
+   nav#left-top button {
+      font-size: 1.25rem;
+   }
+}
+
+/* 1023.008px */
+@media only screen and (max-width: 63.938rem) {
+   div#logo-footer p {
+      font-size: 2.5rem;
+   }
+}
+
+/* 767.008px */
+@media only screen and (max-width: 47.938rem) {
+   h1#large-title {
+      font-size: 4.4rem;
+   }
 }

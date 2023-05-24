@@ -34,12 +34,16 @@
     <!-- / -->
 
     <!-- Shows sticky nav when scrollup and hides when scroll down  -->
-    <!-- <script type="text/javascript">
-        var prevScrollPos = window.pageYOffset;
+    <script type="text/javascript">
+        var yPos = function() {
+            return window.pageYOffset;
+        };
+
+        var prevScrollPos = yPos();
         var id = "sticky";
 
         window.onscroll = function () {
-            var currentScrollPos = window.pageYOffset;
+            var currentScrollPos = yPos();
 
             if (prevScrollPos > currentScrollPos) {
                 document.getElementById(id).style.top = "-2px";
@@ -48,9 +52,9 @@
                 document.getElementById(id).style.top = "-68px";
             }
 
-            prevScrollpos = currentScrollPos;
+            prevScrollPos = currentScrollPos;
         }
-    </script> -->
+    </script>
     <!-- / -->
 
     <!-- Shows/hides hidden div and changes button's content -->
@@ -236,9 +240,11 @@
         </nav>
 
         <section id="large-img">
+            <!-- <div> -->
                 <h1 id="large-title">
                     Company
                 </h1>
+            <!-- </div> -->
         </section>
 
         <main>
@@ -380,11 +386,11 @@
 
         <footer>
             <div id="logo-footer">
-                <!-- <div> -->
+                <div>
                     <p>
                         Company
                     </p>
-                <!-- </div> -->
+                </div>
             </div>
 
             <div id="nav-footer">
