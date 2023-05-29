@@ -2,6 +2,8 @@ section#large-img {
    background-image: url(../img/header4.webp);
    background-size: cover;
    background-position: 50% 50%;
+   background-origin: content-box;
+   background-repeat: no-repeat;
 }
 
 div#img-left-yellow {
