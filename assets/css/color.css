@@ -42,7 +42,7 @@ nav#right-top li:first-child a:active {
    color: #0000F5;
 }
 
-@media only screen and (max-width: 1022px) {
+@media only screen and (max-width: 76.25rem) {
    div#hidden,
    div#hidden a:link,
    div#hidden a:visited,

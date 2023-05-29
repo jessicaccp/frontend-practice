@@ -6,7 +6,7 @@
       font-size: 1rem;
       font-size: clamp(1rem, 0.889rem + 0.5549999999999999vw, 1.777rem);
       font-weight: 400;
-      line-height: 1.75;
+      line-height: 1.5;
       font-family: "Outfit", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       text-decoration: none;
    }
@@ -29,14 +29,11 @@
          }
 
          div#logo-top p {
-            line-height: 0;
             text-transform: uppercase;
          }
 
-         nav#left-top a {
-            /* text-decoration: none; */
-            line-height: 0;
-         }
+         /* nav#left-top a {
+         } */
 
          nav#left-top button {
             font-size: 0.75rem;
@@ -45,10 +42,8 @@
             line-height: 0;
          }
 
-         nav#right-top a {
-            /* text-decoration: none; */
-            line-height: 0;
-         }
+         /* nav#right-top a {
+         } */
 
          nav#right-top a.smaller {
             font-size: 0.75rem;
@@ -59,16 +54,15 @@
          div#hidden {
             font-size: 0.75rem;
             font-size: clamp(0.75rem, 0.6667142857142857rem + 0.4164285714285714vw, 1.333rem);
-            /* font-weight: 900; */
          }
 
          div#hidden section.row h2 {
             font-size: 1rem;
             font-size: clamp(1rem, 0.889rem + 0.5549999999999999vw, 1.777rem);
+            line-height: 2.5;
          }
 
          /* div#hidden section.row a {
-            text-decoration: none;
          } */
 
          div#hidden li.column h3,
@@ -81,7 +75,6 @@
       nav#sticky a {
          font-size: 0.75rem;
          font-size: clamp(0.75rem, 0.7142857142857143rem + 0.17857142857142858vw, 1rem);
-         /* text-decoration: none; */
          font-weight: 900;
       }
 
@@ -90,6 +83,7 @@
          font-size: 4rem;
          font-size: clamp(4rem, 2.673142857142857rem + 6.634285714285715vw, 13.288rem);
          font-weight: 900;
+         letter-spacing: -0.75rem;
       }
 
    /* main */
@@ -102,6 +96,7 @@
          section.text-section p {
             font-size: 1rem;
             font-size: clamp(1rem, 0.9524285714285714rem + 0.23785714285714282vw, 1.333rem);
+            line-height: 1.75;
          }
 
       /* figure */
@@ -116,10 +111,13 @@
          div#text-right-blue a {
             font-size: 1.333rem;
             font-size: clamp(1.333rem, 1.185rem + 0.7400000000000001vw, 2.369rem);
-            /* text-decoration: none; */
          }
 
    /* footer */
+   footer {
+      line-height: 1.333;
+   }
+
       /* div#logo-footer */
          div#logo-footer p {
             font-size: 1.777rem;
@@ -131,192 +129,22 @@
          div#nav-footer div.column a,
          div#nav-footer div.column h3,
          div#nav-footer div.column p {
-            /* text-decoration: none; */
+            font-size: 0.75rem;
+            font-size: clamp(0.75rem, 0.6667142857142857rem + 0.4164285714285714vw, 1.333rem);
          }
 
          div#nav-footer div.column input#email,
          div#nav-footer div.column input#submit,
-         div#nav-footer div.column form select {}
+         div#nav-footer div.column form select {
+            font-size: 0.75rem;
+            font-size: clamp(0.75rem, 0.6667142857142857rem + 0.4164285714285714vw, 1.333rem);
+            font-weight: 900;
+         }
 
       /* div#bottom */
          nav#left-bottom a,
          section#made-in p {
             font-size: 0.75rem;
             font-size: clamp(0.75rem, 0.7142857142857143rem + 0.17857142857142858vw, 1rem);
-            /* text-decoration: none; */
+            font-weight: 900;
          }
-
-
-
-
-/* ---------------- */
-/* body,
-button,
-input,
-select,
-option,
-form {
-   font-family: "Outfit", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-   font-size: 1.5rem;
-   line-height: 2rem;
-   font-weight: normal;
-   text-decoration: none;
-}
-
-a:link,
-a:visited,
-a:hover,
-a:active {
-   text-decoration: none;
-}
-
-div#top,
-div#top button,
-nav#sticky,
-input#submit {
-   font-weight: bold;
-}
-
-div#logo-top p {
-   font-size: 1rem;
-   line-height: 1.33rem;
-   text-transform: uppercase;
-}
-
-nav#left-top li,
-nav#left-top button {
-   font-size: 1.5rem;
-   line-height: 2rem;
-}
-
-nav#right-top li:last-child,
-nav#sticky {
-   font-size: 1.25rem;
-   line-height: 1.66rem;
-}
-
-h2 {
-   font-size: 2rem;
-   line-height: 2.66rem;
-}
-
-section#large-img div {
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   width: 430px;
-   height: 104px;
-}
-
-h1#large-title {
-   font-size: 10rem;
-   line-height: 13.33rem;
-   font-weight: bold;
-   letter-spacing: -0.5rem;
-}
-
-figcaption,
-select,
-div#bottom {
-   font-size: 1.25rem;
-   line-height: 1.66rem;
-   font-weight: bold;
-}
-
-div#logo-footer {
-   font-size: 5rem;
-   line-height: 6.66rem;
-   font-weight: bold;
-}
-
-footer h3 {
-   font-size: 1.25rem;
-} */
-
-/* 1400px */
-   @media only screen and (max-width: 87.5rem) {
-
-   }
-
-/* 1200px */
-   @media only screen and (max-width: 75rem) {
-
-   }
-
-/* 992px */
-   @media only screen and (max-width: 62rem) {
-
-   }
-
-/* 768px */
-   @media only screen and (max-width: 48rem) {
-
-   }
-
-/* 576px */
-   @media only screen and (max-width: 36rem) {
-
-   }
-
-/* 1279.008px */
-/* @media only screen and (max-width: 79.938rem) {
-
-   nav#left-top li,
-   nav#left-top button {
-      font-size: 1rem;
-   }
-
-   nav#right-top a,
-   nav#sticky a {
-      font-size: 0.875rem;
-   }
-
-   div#hidden h2 {
-      font-size: 1.5rem;
-   }
-
-   div#hidden a,
-   div#hidden h3,
-   div#hidden p {
-      font-size: 1rem;
-   }
-
-   div#nav-footer a,
-   div#nav-footer h3,
-   div#nav-footer p,
-   div#nav-footer input {
-      font-size: 1rem;
-   }
-} */
-
-/* 1123.008px */
-/* @media only screen and (max-width: 70.188rem) {
-   body,
-   input,
-   select {
-      font-size: 1rem;
-   }
-
-   h2 {
-      font-size: 1.25rem;
-   }
-
-   nav#left-top li,
-   nav#left-top button {
-      font-size: 1.25rem;
-   }
-} */
-
-/* 1023.008px */
-/* @media only screen and (max-width: 63.938rem) {
-   div#logo-footer p {
-      font-size: 2.5rem;
-   }
-} */
-
-/* 767.008px */
-/* @media only screen and (max-width: 47.938rem) {
-   h1#large-title {
-      font-size: 4.4rem;
-   }
-} */
