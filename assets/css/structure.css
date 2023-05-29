@@ -22,16 +22,18 @@ body {
 div#main-container {
    display: flex;
    flex-direction: column;
-   max-width: 100rem;
-   width: calc(100vw - calc(100vw - 100%));
+   width: 95vw;
+   min-width: 20rem;
    height: fit-content;
    margin: 0 auto;
+   padding: 0 1vw;
 }
 
 /* atualizar classes */
 header {
-   max-width: calc(100vw - calc(100vw - 100%));
+   max-width: 95vw;
    width: 100%;
+   min-width: inherit;
    height: fit-content;
 }
 
@@ -40,8 +42,9 @@ div#top {
    flex-direction: row;
    /* flex-wrap: wrap; */
    align-items: center;
-   gap: 1rem;
+   gap: 1vw;
    max-width: inherit;
+   min-width: inherit;
    width: inherit;
    height: 4.375rem;
 }
@@ -78,10 +81,9 @@ nav#left-top ul {
    display: flex;
    flex-direction: row;
    max-width: inherit;
-   /* width: inherit; */
    align-items: center;
    height: fit-content;
-   gap: 1rem;
+   gap: 1vw;
 }
 
 nav#left-top li {
@@ -116,11 +118,10 @@ nav#right-top {
 nav#right-top ul {
    display: flex;
    flex-direction: row;
-   gap: 1rem;
+   gap: 1vw;
    align-items: center;
    min-width: 0;
    max-width: inherit;
-   /* width: inherit; */
    height: fit-content;
 }
 
@@ -140,6 +141,7 @@ div#hidden {
    flex-direction: column;
    justify-content: space-evenly;
    max-width: inherit;
+   min-width: inherit;
    width: inherit;
    height: 21.875rem;
 }
@@ -166,7 +168,7 @@ div#hidden nav {
 div#hidden ul {
    display: flex;
    flex-direction: row;
-   gap: 1rem;
+   gap: 1vw;
    max-width: inherit;
    width: inherit;
    height: inherit;
@@ -201,13 +203,17 @@ div#hidden div p {
 
 nav#sticky {
    display: flex;
-   flex: row;
+   flex-direction: row;
    align-items: center;
    position: sticky;
    top: -0.1rem;
-   max-width: calc(100vw - calc(100vw - 100%));
-   width: 100%;
+   max-width: 95vw;
+   width: 95vw;
+   min-width: inherit;
    height: 4.25rem;
+   margin-left: -1vw;
+   margin-right: -1vw;
+   padding: 0 1vw;
    border-top-width: 0.1rem;
    border-top-style: solid;
    z-index: 10;
@@ -234,7 +240,7 @@ nav#sticky {
 nav#sticky ul {
    display: flex;
    flex-direction: row;
-   gap: 1rem;
+   gap: 1vw;
    min-width: 0;
    max-width: inherit;
    width: inherit;
@@ -257,13 +263,12 @@ section#large-img {
    flex-direction: row;
    align-items: center;
    justify-content: center;
-   max-width: calc(100vw - calc(100vw - 100%));
+   max-width: 95vw;
+   min-width: inherit;
    width: 100%;
    min-height: calc(100vh - calc(4.375rem + 4.25rem));
    height: calc(100vh - calc(4.375rem + 4.25rem));
    z-index: 2;
-   padding-right: 8vw;
-   padding-left: 8vw;
 }
 
 h1#large-title {
@@ -277,23 +282,24 @@ main {
    display: flex;
    flex-direction: column;
    align-items: center;
-   gap: 8vw;
-   max-width: calc(100vw - calc(100vw - 100%));
+   gap: calc(2vh + 5vw);
+   max-width: 95vw;
    width: 100%;
+   min-width: inherit;
    height: fit-content;
-   padding: 8vw 0;
+   padding: calc(2vh + 5vw) 0;
 }
 
 section.text-section {
    min-width: 0;
    max-width: inherit;
-   width: 50rem;
+   width: 75%;
    height: fit-content;
 }
 
 section.text-section h2 {
    max-width: inherit;
-   width: inherit;
+   width: 100%;
    height: fit-content;
 }
 
@@ -304,17 +310,19 @@ section.text-section a {
 
 section.text-section p {
    max-width: inherit;
-   width: inherit;
+   width: 100%;
    height: fit-content;
 }
 
 div#yellow-container {
    min-width: 0;
    position: relative;
-   max-width: inherit;
-   width: inherit;
-   max-height: 58rem;
-   height: 58vw;
+   max-width: 95vw;
+   width: 95vw;
+   max-height: 45vw;
+   height: 45vw;
+   margin-left: -1vw;
+   margin-right: -1vw;
    z-index: 1;
 }
 
@@ -345,27 +353,25 @@ div#img-right-yellow {
    right: 8%;
    left: 59%;
    width: 33%;
-   max-height: 33rem;
+   /* max-height: 33rem; */
    height: 42%;
    z-index: 4;
 }
 
 figure {
    min-width: 0;
-   max-width: inherit;
-   width: 50rem;
+   max-width: 50vw;
+   width: 50vw;
    height: fit-content;
 }
 
 figure video {
-   /* min-width: 0; */
    max-width: inherit;
    width: 100%;
    height: auto;
 }
 
 figure video source {
-   /* min-width: 0; */
    max-width: inherit;
    width: inherit;
    height: inherit;
@@ -380,10 +386,12 @@ figure figcaption {
 div#green-container {
    min-width: 0;
    position: relative;
-   max-width: inherit;
-   width: inherit;
-   max-height: 58rem;
-   height: 58vw;
+   max-width: 95vw;
+   width: 95vw;
+   max-height: 45vw;
+   height: 45vw;
+   margin-left: -1vw;
+   margin-right: -1vw;
    z-index: 1;
 }
 
@@ -431,25 +439,28 @@ div#img-right-green {
 
 div#colorless-container {
    min-width: 0;
-   max-width: inherit;
-   width: 50rem;
+   max-width: 75vw;
+   width: 75vw;
    height: fit-content;
 }
 
 div#img-center-colorless {
    width: 100%;
-   max-height: 33.344rem;
-   height: 66.6875vw;
+   max-height: 33vw;
+   height: 33vw;
 }
 
 div#purple-container {
    min-width: 0;
    position: relative;
-   max-width: inherit;
-   width: inherit;
-   max-height: 58rem;
-   height: 58vw;
+   max-width: 95vw;
+   width: 95vw;
+   max-height: 45vw;
+   height: 45vw;
+   margin-left: -1vw;
+   margin-right: -1vw;
    z-index: 1;
+   
 }
 
 div#purple-block {
@@ -486,10 +497,12 @@ div#img-right-purple {
 div#blue-container {
    min-width: 0;
    position: relative;
-   max-width: inherit;
-   width: inherit;
-   max-height: 42rem;
-   height: 42vw;
+   max-width: 95vw;
+   width: 95vw;
+   max-height: 45vw;
+   height: 45vw;
+   margin-left: -1vw;
+   margin-right: -1vw;
    z-index: 1;
 }
 
@@ -536,7 +549,7 @@ div#text-right-blue a {
 }
 
 footer {
-   min-width: 0;
+   min-width: inherit;
    width: inherit;
    max-width: inherit;
    height: fit-content;
@@ -550,11 +563,12 @@ div#logo-footer {
    align-items: center;
    max-width: inherit;
    width: inherit;
+   min-width: inherit;
    height: 15.813rem;
 }
 
 div#logo-footer p {
-   min-width: 0;
+   min-width: inherit;
    width: fit-content;
    height: fit-content;
 }
@@ -565,6 +579,7 @@ div#nav-footer {
    gap: 1rem;
    max-width: inherit;
    width: inherit;
+   min-width: inherit;
    min-height: 22rem;
    height: fit-content;
 }
@@ -726,6 +741,7 @@ div#bottom {
    align-items: center;
    max-width: inherit;
    width: inherit;
+   min-width: inherit;
    height: 10.688rem;
 }
 

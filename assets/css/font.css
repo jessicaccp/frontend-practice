@@ -83,7 +83,6 @@
          font-size: 4rem;
          font-size: clamp(4rem, 2.673142857142857rem + 6.634285714285715vw, 13.288rem);
          font-weight: 900;
-         letter-spacing: -0.75rem;
       }
 
    /* main */
