@@ -47,7 +47,11 @@ nav#right-top li:first-child a:active {
    color: #0000F5;
 }
 
-@media only screen and (max-width: 64rem) {
+div#hidden {
+   border-color: #eeeeee;
+}
+
+/* @media only screen and (max-width: 64rem) {
    div#hidden,
    div#hidden a:link,
    div#hidden a:visited,
@@ -56,7 +60,29 @@ nav#right-top li:first-child a:active {
       background-color: #0000F5;
       color: #ffffff;
    }
-}
+
+   nav#left-top,
+   nav#left-top a:link,
+   nav#left-top a:visited,
+   nav#left-top a:hover,
+   nav#left-top a:active {
+      background-color: #0000F5;
+      color: #ffffff;
+   }
+
+   nav#right-top,
+   nav#right-top a:link,
+   nav#right-top a:visited,
+   nav#right-top a:hover,
+   nav#right-top a:active,
+   nav#right-top li:first-child a:link,
+   nav#right-top li:first-child a:visited,
+   nav#right-top li:first-child a:hover,
+   nav#right-top li:first-child a:active {
+      background-color: #0000F5;
+      color: #ffffff;
+   }
+} */
 
 .current,
 a.current:link,
@@ -71,7 +97,6 @@ nav#sticky {
    border-color: #eeeeee;
 }
 
-/* insert large title settings */
 h1#large-title {
    border-color: #992400;
    color: #992400;

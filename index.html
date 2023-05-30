@@ -28,6 +28,7 @@
     <link href="assets/css/color.css" rel="stylesheet">
     <link href="assets/css/font.css" rel="stylesheet">
     <link href="assets/css/image.css" rel="stylesheet">
+    <link href="assets/css/menu.css" rel="stylesheet">
     <!-- / -->
 </head>
 
@@ -124,7 +125,7 @@
                             <li><a href="#">Another What?</a></li>
                             <li><a href="#" class="current">Current Page</a></li>
                             <li><a href="#">Another Page</a></li>
-                            <li><a href="#">Only One More Page</a></li><br>
+                            <li><a href="#">Only One More Page</a></li>
                         </ul>
                     </nav>
                 </section>
@@ -565,18 +566,24 @@
 
     <!-- Scripts -->
     <!-- Changes "menu" button::after content and shows/hides top menu depending on window width -->
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         var getVW = function() {
             return window.innerWidth;
         };
 
         var breakpointVW = 1024;
-        var prevVW = 0;
+        var prevVW = 9999;
         var currentVW = getVW();
         var navLeft = document.getElementById("left-top");
         var navRight = document.getElementById("right-top");
         var navHidden = document.getElementById("hidden");
         var buttonStyle = 0;
+        var firstRun = true;
+
+        // if (firstRun == true) {
+        //     prevVW = getVW();
+        //     firstRun = false;
+        // }
 
         window.onresize = function showNavTop() {
             currentVW = getVW();
@@ -598,7 +605,7 @@
 
             prevVW = currentVW;
         }
-    </script>
+    </script> -->
     <!-- / -->
 
     <!-- Shows sticky nav when scrollup and hides when scroll down  -->
@@ -644,7 +651,7 @@
     <!-- / -->
 
     <!-- Shows/hides top menu when button "menu" is clicked -->
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         function toggleTopMenu() {
             var navLeftTop = document.getElementById("left-top");
             var navRightTop = document.getElementById("right-top");
@@ -663,7 +670,7 @@
                 toggleDiv();
             }
         }
-    </script>
+    </script> -->
     <!-- / -->
     <!-- / -->
 </body>

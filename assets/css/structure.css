@@ -26,13 +26,13 @@ div#main-container {
    min-width: 20rem;
    height: fit-content;
    margin: 0 auto;
-   padding: 0 1vw;
+   padding: 0 2.5vw;
 }
 
-/* atualizar classes */
 header {
+   margin: 0 -2.5vw;
    max-width: 95vw;
-   width: 100%;
+   width: 95vw;
    min-width: inherit;
    height: fit-content;
 }
@@ -41,20 +41,16 @@ div#top {
    display: flex;
    flex-direction: row;
    align-items: center;
-   gap: 1vw;
+   gap: 2.5vw;
    max-width: inherit;
    min-width: inherit;
    width: inherit;
    height: 4.375rem;
-}
-
-div#logo-top {
-   min-width: 0;
-   width: 3.75rem;
-   height: 1.75rem;
+   padding: 0 2.5vw;
 }
 
 div#logo-top div {
+   min-width: 0;
    width: 3.75rem;
    height: 1.75rem;
 }
@@ -74,7 +70,7 @@ div#logo-top p {
 }
 
 div#menu-top {
-   display: none;
+   display: block;
 }
 
 div#menu-top button::after {
@@ -148,73 +144,24 @@ nav#right-top a {
    width: inherit;
 }
 
-@media only screen and (max-width: 64rem) {
-   div#top {
-      height: fit-content;
-      /* flex-direction: column; */
-      flex-wrap: wrap;
-      /* align-items: baseline; */
-   }
-
-   div#logo-top {
-      height: 4.375rem;
-      display: flex;
-      align-items: center;
-   }
-
-   div#menu-top {
-      display: block;
-      width: calc(92vw - 3.75rem);
-   }
-
-   div#menu-top button {
-      cursor: pointer;
-   }
-
-   nav#left-top {
-      display: none;
-      margin-right: 0;
-      width: 93vw;
-   }
-
-   nav#left-top ul {
-      flex-direction: column;
-      align-items: flex-start;
-   }
-
-   nav#left-top li:last-child {
-      display: none;
-   }
-
-   nav#right-top {
-      display: none;
-      margin-left: 0;
-      width: 93vw;
-   }
-
-   nav#right-top ul {
-      flex-direction: column;
-      align-items: flex-start;
-   }
-}
-
 div#hidden {
    display: none;
    flex-direction: column;
-   justify-content: space-evenly;
    max-width: 95vw;
    width: 95vw;
-   height: 21.875rem;
-   margin-left: -1vw;
-   margin-right: -1vw;
-   padding: 0 1vw;
+   height: fit-content;
+   padding: 2.5vw;
+   padding-bottom: 0;
+   border-top-width: 0.1rem;
+   border-top-style: solid;
 }
 
 div#hidden section {
    min-width: 0;
-   max-width: 93vw;
+   max-width: 90vw;
    width: inherit;
    height: fit-content;
+   padding-bottom: 2.5vw;
 }
 
 div#hidden h2 {
@@ -265,32 +212,6 @@ div#hidden div p {
    height: fit-content;
 }
 
-@media only screen and (max-width: 64rem) {
-   div#hidden {
-      margin-left: -1vw;
-      margin-right: -1vw;
-      padding: 5vw;
-      padding-bottom: 0;
-      justify-content: unset;
-      height: fit-content;
-   }
-
-   div#hidden section.row:first-child ul {
-      flex-direction: column;
-   }
-
-   div#hidden section.row:last-child ul {
-      overflow-x: auto;
-      padding-bottom: 5vw;
-      max-width: 85vw;
-   }
-
-   div#hidden section.row:last-child li {
-      min-width: 12rem;
-   }
-
-}
-
 nav#sticky {
    display: flex;
    flex-direction: row;
@@ -301,9 +222,8 @@ nav#sticky {
    width: 95vw;
    min-width: inherit;
    height: 4.25rem;
-   margin-left: -1vw;
-   margin-right: -1vw;
-   padding: 0 1vw;
+   margin: 0 -2.5vw;
+   padding: 0 2.5vw;
    border-top-width: 0.1rem;
    border-top-style: solid;
    z-index: 10;
@@ -648,14 +568,13 @@ div#text-right-blue a {
 
 footer {
    min-width: inherit;
-   width: 100%;
-   max-width: inherit;
+   width: 95vw;
+   max-width: 95vw;
    height: fit-content;
    border-top-width: 0.1rem;
    border-top-style: solid;
-   margin-left: -1vw;
-   margin-right: -1vw;
-   padding: 0 5vw;
+   margin: 0 -2.5vw;
+   padding: 0 2.5vw;
 }
 
 div#logo-footer {
@@ -663,7 +582,7 @@ div#logo-footer {
    flex-direction: row;
    align-items: center;
    max-width: inherit;
-   width: inherit;
+   width: 90vw;
    min-width: inherit;
    height: fit-content;
    margin-top: calc(2vh + 5vw);
@@ -680,8 +599,8 @@ div#nav-footer {
    display: flex;
    flex-direction: column;
    gap: 1vw;
-   max-width: inherit;
-   width: inherit;
+   max-width: 90vw;
+   width: 90vw;
    min-width: inherit;
    height: fit-content;
 }
@@ -699,18 +618,18 @@ div#nav-footer section.row {
 }
 
 div#nav-footer section.row:first-child {
-   margin-bottom: 1vw;
+   margin-bottom: 2.5vw;
 }
 
 div#nav-footer div.column {
    min-width: 0;
-   width: 32%;
+   width: 29vw;
    height: 100%;
 }
 
 div#nav-footer div.column ul {
    min-width: 0;
-   width: fit-content;
+   width: 100%;
    max-width: 100%;
    height: fit-content;
    max-height: 100%;
@@ -718,13 +637,8 @@ div#nav-footer div.column ul {
 
 div#nav-footer div.column li {
    min-width: 0;
-   width: fit-content;
-   height: fit-content;
-}
-
-div#nav-footer div.column:last-child li,
-div#nav-footer div.column:last-child ul {
    width: 100%;
+   height: fit-content;
 }
 
 div#nav-footer div.column h3 {
@@ -764,6 +678,7 @@ div#nav-footer div.column input {
 }
 
 div#nav-footer div.column input#submit {
+   min-width: 30%;
    max-width: 30%;
 }
 
@@ -777,7 +692,7 @@ div#nav-footer div.column select {
    padding: 0.5rem;
    padding-right: 0;
    min-width: 0;
-   width: fit-content;
+   width: 50%;
    height: fit-content;
 }
 
@@ -790,11 +705,10 @@ div#nav-footer div.column option {
 section#social-media {
    display: flex;
    flex-direction: row;
-   flex-wrap: wrap;
    gap: 0.25rem;
    width: 100%;
    height: fit-content;
-   margin-top: 1vw;
+   margin-top: 2.5vw;
 }
 
 div.social-media-square {
@@ -819,10 +733,12 @@ div#bottom {
    flex-direction: row;
    gap: 1vw;
    align-items: center;
-   max-width: inherit;
-   width: inherit;
+   max-width: 95vw;
+   width: 95vw;
    min-width: inherit;
    height: 10.688rem;
+   margin: 0 -2.5vw;
+   padding: 0 2.5vw;
 }
 
 nav#left-bottom {
@@ -844,9 +760,6 @@ nav#left-bottom ul {
 nav#left-bottom li {
    min-width: 0;
 }
-
-/* nav#left-bottom a {
-} */
 
 section#made-in {
    display: flex;
