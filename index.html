@@ -28,57 +28,16 @@
     <link href="assets/css/color.css" rel="stylesheet">
     <link href="assets/css/font.css" rel="stylesheet">
     <link href="assets/css/image.css" rel="stylesheet">
-
-    <!-- / -->
-
-    <!-- Shows sticky nav when scrollup and hides when scroll down  -->
-    <script type="text/javascript">
-        var yPos = function() {
-            return window.pageYOffset;
-        };
-
-        var prevScrollPos = yPos();
-        var id = "sticky";
-
-        window.onscroll = function () {
-            var currentScrollPos = yPos();
-
-            if (prevScrollPos > currentScrollPos) {
-                document.getElementById(id).style.top = "-2px";
-            }
-            else {
-                document.getElementById(id).style.top = "-68px";
-            }
-
-            prevScrollPos = currentScrollPos;
-        }
-    </script>
-    <!-- / -->
-
-    <!-- Shows/hides hidden div and changes button's content -->
-    <script type="text/javascript">
-        function toggleDiv() {
-            var hiddenDiv = document.getElementById("hidden");
-            var styleElem = document.head.appendChild(document.createElement("style"));
-
-            if (hiddenDiv.style.display == "flex") {
-                hiddenDiv.style.display = "none";
-                styleElem.innerHTML = 'nav#left-top button::after {content: " +";}';
-            }
-            else {
-                hiddenDiv.style.display = "flex";
-                styleElem.innerHTML = 'nav#left-top button::after {content: " -";}';
-            }
-        }
-    </script>
     <!-- / -->
 </head>
 
 <body>
+    <!-- Website content -->
     <div id="main-container">
         <header>
             <div id="top">
                 <div id="logo-top">
+                    <div>
                     <a href="#" title="Company Homepage">
                         <!-- <span> -->
                             <p>
@@ -86,6 +45,11 @@
                             </p>
                         <!-- </span> -->
                     </a>
+                    </div>
+                </div>
+
+                <div id="menu-top">
+                    <button onclick="javascript:toggleTopMenu()">Menu</button>
                 </div>
 
                 <nav id="left-top">
@@ -597,6 +561,111 @@
             </div>
         </footer>
     </div>
+    <!-- / -->
+
+    <!-- Scripts -->
+    <!-- Changes "menu" button::after content and shows/hides top menu depending on window width -->
+    <script type="text/javascript">
+        var getVW = function() {
+            return window.innerWidth;
+        };
+
+        var breakpointVW = 1024;
+        var prevVW = 0;
+        var currentVW = getVW();
+        var navLeft = document.getElementById("left-top");
+        var navRight = document.getElementById("right-top");
+        var navHidden = document.getElementById("hidden");
+        var buttonStyle = 0;
+
+        window.onresize = function showNavTop() {
+            currentVW = getVW();
+            
+            if (currentVW > breakpointVW && prevVW <= breakpointVW) {
+                navLeft.style.display = "block";
+                navRight.style.display = "block";
+                navHidden.style.display = "none";
+                buttonStyle = document.head.appendChild(document.createElement("style"));
+                buttonStyle.innerHTML = "div#menu-top button::after { content: ' ▾'; } nav#left-top button::after { content: ' +'; }";
+            }
+            else if (currentVW <= breakpointVW && prevVW > breakpointVW) {
+                navLeft.style.display = "none";
+                navRight.style.display = "none";
+                navHidden.style.display = "none";
+                buttonStyle = document.head.appendChild(document.createElement("style"));
+                buttonStyle.innerHTML = "div#menu-top button::after { content: ' ▾'; } nav#left-top button::after { content: ' +'; }";
+            }
+
+            prevVW = currentVW;
+        }
+    </script>
+    <!-- / -->
+
+    <!-- Shows sticky nav when scrollup and hides when scroll down  -->
+    <script type="text/javascript">
+        var yPos = function() {
+            return window.pageYOffset;
+        };
+
+        var prevScrollPos = yPos();
+        var navId = "sticky";
+
+        window.onscroll = function () {
+            var currentScrollPos = yPos();
+
+            if (prevScrollPos > currentScrollPos) {
+                document.getElementById(navId).style.top = "-0.1rem";
+            }
+            else {
+                document.getElementById(navId).style.top = "-4.25rem";
+            }
+
+            prevScrollPos = currentScrollPos;
+        }
+    </script>
+    <!-- / -->
+
+    <!-- Shows/hides div#hidden-div when button "more" is clicked -->
+    <script type="text/javascript">
+        function toggleDiv() {
+            var hiddenDiv = document.getElementById("hidden");
+            var styleElem = document.head.appendChild(document.createElement("style"));
+
+            if (hiddenDiv.style.display == "flex") {
+                hiddenDiv.style.display = "none";
+                styleElem.innerHTML = 'nav#left-top button::after {content: " +";}';
+            }
+            else {
+                hiddenDiv.style.display = "flex";
+                styleElem.innerHTML = 'nav#left-top button::after {content: " \u2212";}';
+            }
+        }
+    </script>
+    <!-- / -->
+
+    <!-- Shows/hides top menu when button "menu" is clicked -->
+    <script type="text/javascript">
+        function toggleTopMenu() {
+            var navLeftTop = document.getElementById("left-top");
+            var navRightTop = document.getElementById("right-top");
+            var buttonMenuStyle = document.head.appendChild(document.createElement("style"));
+
+            if (navLeftTop.style.display == "block") {
+                navLeftTop.style.display = "none";
+                navRightTop.style.display = "none";
+                buttonMenuStyle.innerHTML = "div#menu-top button::after { content: ' ▾'; }";
+                toggleDiv();
+            }
+            else {
+                navLeftTop.style.display = "block";
+                navRightTop.style.display = "block";
+                buttonMenuStyle.innerHTML = "div#menu-top button::after { content: ' ▴'; }";
+                toggleDiv();
+            }
+        }
+    </script>
+    <!-- / -->
+    <!-- / -->
 </body>
 
 </html>

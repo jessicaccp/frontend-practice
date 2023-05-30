@@ -32,6 +32,13 @@
             text-transform: uppercase;
          }
 
+         div#menu-top button {
+            font-size: 0.75rem;
+            font-size: clamp(0.75rem, 0.6667142857142857rem + 0.4164285714285714vw, 1.333rem);
+            font-weight: 900;
+            line-height: 0;
+         }
+
          /* nav#left-top a {
          } */
 

@@ -12,7 +12,7 @@ div#main-container {
    background-color: #ffffff;
 }
 
-div#logo-top {
+div#logo-top div {
    background-color: #333333;
 }
 
@@ -35,6 +35,11 @@ button {
    color: #992400;
 }
 
+div#menu-top button {
+   background: none;
+   color: #333333;
+}
+
 nav#right-top li:first-child a:link,
 nav#right-top li:first-child a:visited,
 nav#right-top li:first-child a:hover,
@@ -42,7 +47,7 @@ nav#right-top li:first-child a:active {
    color: #0000F5;
 }
 
-@media only screen and (max-width: 76.25rem) {
+@media only screen and (max-width: 64rem) {
    div#hidden,
    div#hidden a:link,
    div#hidden a:visited,
