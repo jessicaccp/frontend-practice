@@ -108,8 +108,8 @@
       /* div#blue-container */
          div#text-right-blue h2,
          div#text-right-blue a {
-            font-size: 1.333rem;
-            font-size: clamp(1.333rem, 1.185rem + 0.7400000000000001vw, 2.369rem);
+            font-size: 0.5rem;
+            font-size: clamp(0.5rem, 5.551115123125783e-17rem + 2.5vw, 4rem);
          }
 
    /* footer */
@@ -122,6 +122,7 @@
             font-size: 1.777rem;
             font-size: clamp(1.777rem, 1.4295714285714285rem + 1.7371428571428569vw, 4.209rem);
             font-weight: 900;
+            line-height: 1;
          }
 
       /* div#nav-footer */

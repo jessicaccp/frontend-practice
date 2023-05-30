@@ -15,19 +15,19 @@ div#img-left-yellow {
 div#img-right-yellow {
    background-image: url(../img/yellow2.webp);
    background-size: cover;
-   background-position: 50% 50%;
+   background-position: 50% 30%;
 }
 
 div#img-left-top-green {
    background-image: url(../img/green2.webp);
    background-size: cover;
-   background-position: 50% 50%;
+   background-position: 50% 40%;
 }
 
 div#img-left-bottom-green {
    background-image: url(../img/green3.webp);
    background-size: cover;
-   background-position: 50% 50%;
+   background-position: 50% 40%;
 }
 
 div#img-right-green {
@@ -57,5 +57,21 @@ div#img-right-purple {
 div#img-left-blue {
    background-image: url(../img/blue1.webp);
    background-size: cover;
-   background-position: 50% 50%;
+   background-position: 45% 50%;
+}
+
+div.social-media-square#facebook {
+   background-image: url(../icon/facebook.png);
+}
+
+div.social-media-square#twitter {
+   background-image: url(../icon/twitter.png);
+}
+
+div.social-media-square#youtube {
+   background-image: url(../icon/youtube.png);
+}
+
+div.social-media-square#instagram {
+   background-image: url(../icon/instagram.png);
 }
