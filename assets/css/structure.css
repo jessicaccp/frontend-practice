@@ -70,7 +70,13 @@ div#logo-top p {
 }
 
 div#menu-top {
-   display: block;
+   display: none;
+}
+
+@media only screen and (max-width: 64rem) {
+   div#menu-top {
+      display: block;
+   }
 }
 
 div#menu-top button::after {
@@ -610,11 +616,18 @@ div#nav-footer section.row {
    flex-direction: row;
    justify-content: space-between;
    gap: 1vw;
-   flex-wrap: wrap;
    height: 50%;
    width: inherit;
    max-width: inherit;
-   overflow: hidden;
+}
+
+@media only screen and (max-width: 64rem) {
+   div#nav-footer section.row {
+      flex-direction: column;
+      height: fit-content;
+      justify-content: flex-start;
+      gap: 2.5vw;
+   }
 }
 
 div#nav-footer section.row:first-child {
@@ -625,6 +638,13 @@ div#nav-footer div.column {
    min-width: 0;
    width: 29vw;
    height: 100%;
+}
+
+@media only screen and (max-width: 64rem) {
+   div#nav-footer div.column {
+      width: 100%;
+   }
+
 }
 
 div#nav-footer div.column ul {
@@ -682,6 +702,13 @@ div#nav-footer div.column input#submit {
    max-width: 30%;
 }
 
+@media only screen and (max-width: 64rem) {
+   div#nav-footer div.column input#submit {
+      max-width: 20%;
+      min-width: 20%;
+   }
+}
+
 div#nav-footer div.column a {
    min-width: 0;
    width: fit-content;
@@ -698,7 +725,7 @@ div#nav-footer div.column select {
 
 div#nav-footer div.column option {
    min-width: 0;
-   width: fit-content;
+   width: 100%;
    height: fit-content;
 }
 
@@ -733,12 +760,20 @@ div#bottom {
    flex-direction: row;
    gap: 1vw;
    align-items: center;
-   max-width: 95vw;
-   width: 95vw;
+   max-width: 90vw;
+   width: 90vw;
    min-width: inherit;
    height: 10.688rem;
-   margin: 0 -2.5vw;
-   padding: 0 2.5vw;
+}
+
+@media only screen and (max-width: 64rem) {
+   div#bottom {
+      flex-direction: column;
+      height: fit-content;
+      padding: 2.5vw 0;
+      gap: 2.5vw;
+      align-items: flex-start;
+   }
 }
 
 nav#left-bottom {
@@ -748,6 +783,12 @@ nav#left-bottom {
    margin-right: auto;
 }
 
+@media only screen and (max-width: 64rem) {
+   nav#left-bottom {
+      margin-right: unset;
+   }
+}
+
 nav#left-bottom ul {
    display: flex;
    flex-direction: row;
@@ -755,6 +796,15 @@ nav#left-bottom ul {
    align-items: center;
    min-width: 0;
    height: inherit;
+}
+
+@media only screen and (max-width: 64rem) {
+   nav#left-bottom ul {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: unset;
+      height: fit-content;
+   }
 }
 
 nav#left-bottom li {
@@ -770,6 +820,15 @@ section#made-in {
    margin-left: auto;
 }
 
+@media only screen and (max-width: 64rem) {
+   section#made-in {
+      flex-direction: row-reverse;
+      margin-left: unset;
+      height: calc(5vh + 5vw);
+      gap: 2.5vw;
+   }
+}
+
 section#made-in p {
    min-width: 0;
 }
@@ -778,4 +837,38 @@ div#flag {
    min-width: 0;
    width: 2.813rem;
    height: 1.313rem;
+}
+
+/* button "more" */
+div.more-selected {
+   display: flex;
+}
+
+nav#left-top button::after.more-selected {
+   content: " \u2212";
+}
+
+div.more-deselected {
+   display: none;
+}
+
+nav#left-top button::after.more-deselected {
+   content: " +";
+}
+
+/* button "menu" */
+nav.menu-selected {
+   display: block;
+}
+
+div#menu-top button::after.menu-selected {
+   content: ' ▴';
+}
+
+nav.menu-deselected {
+   display: none;
+}
+
+div#menu-top button::after.menu-deselected {
+   content: ' ▾';
 }
