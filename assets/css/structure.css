@@ -79,6 +79,10 @@ div#menu-top {
    }
 }
 
+div#menu-top button {
+   cursor: pointer;
+}
+
 div#menu-top button::after {
    content: ' ▾';
 }
@@ -869,7 +873,7 @@ div#flag {
 }
 
 /* button "more" */
-div.more-selected {
+/* div.more-selected {
    display: flex;
 }
 
@@ -883,10 +887,10 @@ div.more-deselected {
 
 nav#left-top button::after.more-deselected {
    content: " +";
-}
+} */
 
 /* button "menu" */
-nav.menu-selected {
+/* nav.menu-selected {
    display: block;
 }
 
@@ -900,4 +904,4 @@ nav.menu-deselected {
 
 div#menu-top button::after.menu-deselected {
    content: ' ▾';
-}
+} */

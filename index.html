@@ -50,7 +50,8 @@
                 </div>
 
                 <div id="menu-top">
-                    <button onclick="javascript:toggleSmallHidden()">Menu</button>
+                    <!-- <button type="button" name="menu" onclick="javascript:toggleSmallHidden()">Menu</button> -->
+                    <button type="button" name="menu" id="menu-button">Menu</button>
                 </div>
 
                 <nav id="left-top">
@@ -91,9 +92,10 @@
                             </a>
                         </li>
                         <li>
-                            <button onclick="javascript:toggleBigHidden()">
+                            <!-- <button type="button" name="more" onclick="javascript:toggleBigHidden()">
                                 More
-                            </button>
+                            </button> -->
+                            <button type="button" name="more" id="more-button">More</button>
                         </li>
                     </ul>
                 </nav>
@@ -714,6 +716,19 @@
         }
     </script>
     <!-- / -->
+
+    <script type="text/javascript">
+        const buttonMore = document.getElementById("more-button");
+        const buttonMenu = document.getElementById("menu-button");
+
+        buttonMore.addEventListener('click', () => {
+            toggleBigHidden();
+        });
+
+        buttonMenu.addEventListener('click', () => {
+            toggleSmallHidden();
+        });
+    </script>
 </body>
 
 </html>
