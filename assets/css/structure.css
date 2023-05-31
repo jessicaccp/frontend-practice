@@ -91,6 +91,12 @@ nav#left-top {
    margin-right: auto;
 }
 
+@media only screen and (max-width: 64rem) {
+   nav#left-top {
+      display: none;
+   }
+}
+
 nav#left-top ul {
    display: flex;
    flex-direction: row;
@@ -127,6 +133,12 @@ nav#right-top {
    width: fit-content;
    height: fit-content;
    margin-left: auto;
+}
+
+@media only screen and (max-width: 64rem) {
+   nav#right-top {
+      display: none;
+   }
 }
 
 nav#right-top ul {
@@ -168,6 +180,16 @@ div#hidden section {
    width: inherit;
    height: fit-content;
    padding-bottom: 2.5vw;
+}
+
+div#hidden section#top-hidden-menu {
+   display: none;
+}
+
+@media only screen and (max-width: 64rem) {
+   div#hidden section#top-hidden-menu {
+      display: block;
+   }
 }
 
 div#hidden h2 {
@@ -239,8 +261,8 @@ nav#sticky {
    -moz-transition: position 10s;
    -ms-transition: position 10s;
    -o-transition: position 10s;
-   transition: all 0.5s ease;
-   animation: smoothScroll 1s forwards;
+   transition: all 0.2s ease;
+   animation: smoothScroll 0.5s forwards;
 }
 
 @keyframes smoothScroll {
@@ -626,12 +648,18 @@ div#nav-footer section.row {
       flex-direction: column;
       height: fit-content;
       justify-content: flex-start;
-      gap: 2.5vw;
+      gap: 5vw;
    }
 }
 
 div#nav-footer section.row:first-child {
    margin-bottom: 2.5vw;
+}
+
+@media only screen and (max-width: 64rem) {
+   div#nav-footer section.row:first-child {
+      margin-bottom: 5vw;
+   }
 }
 
 div#nav-footer div.column {
@@ -770,8 +798,8 @@ div#bottom {
    div#bottom {
       flex-direction: column;
       height: fit-content;
-      padding: 2.5vw 0;
-      gap: 2.5vw;
+      padding: 5vw 0;
+      gap: 5vw;
       align-items: flex-start;
    }
 }
@@ -824,7 +852,8 @@ section#made-in {
    section#made-in {
       flex-direction: row-reverse;
       margin-left: unset;
-      height: calc(5vh + 5vw);
+      /* height: calc(5vh + 5vw); */
+      height: fit-content;
       gap: 2.5vw;
    }
 }

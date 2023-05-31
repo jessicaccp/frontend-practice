@@ -50,7 +50,7 @@
                 </div>
 
                 <div id="menu-top">
-                    <button onclick="javascript:toggleTopMenu()">Menu</button>
+                    <button onclick="javascript:toggleSmallHidden()">Menu</button>
                 </div>
 
                 <nav id="left-top">
@@ -91,7 +91,7 @@
                             </a>
                         </li>
                         <li>
-                            <button onclick="javascript:toggleDiv()">
+                            <button onclick="javascript:toggleBigHidden()">
                                 More
                             </button>
                         </li>
@@ -115,6 +115,62 @@
             </div>
 
             <div id="hidden">
+                <section class="row" id="top-hidden-menu">
+                    <nav id="left-top-hidden">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    Page
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Page
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Page
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Page
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Page
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Page
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Page
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav id="right-top-hidden">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    Insert feature here
+                                </a>
+                            </li>
+                            <li>
+                                <a class="smaller" href="#">
+                                    Log in / Register
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+
                 <section class="row">
                     <h2>More nice pages:</h2>
                     <nav>
@@ -565,49 +621,6 @@
     <!-- / -->
 
     <!-- Scripts -->
-    <!-- Changes "menu" button::after content and shows/hides top menu depending on window width -->
-    <!-- <script type="text/javascript">
-        var getVW = function() {
-            return window.innerWidth;
-        };
-
-        var breakpointVW = 1024;
-        var prevVW = 9999;
-        var currentVW = getVW();
-        var navLeft = document.getElementById("left-top");
-        var navRight = document.getElementById("right-top");
-        var navHidden = document.getElementById("hidden");
-        var buttonStyle = 0;
-        var firstRun = true;
-
-        // if (firstRun == true) {
-        //     prevVW = getVW();
-        //     firstRun = false;
-        // }
-
-        window.onresize = function showNavTop() {
-            currentVW = getVW();
-            
-            if (currentVW > breakpointVW && prevVW <= breakpointVW) {
-                navLeft.style.display = "block";
-                navRight.style.display = "block";
-                navHidden.style.display = "none";
-                buttonStyle = document.head.appendChild(document.createElement("style"));
-                buttonStyle.innerHTML = "div#menu-top button::after { content: ' ▾'; } nav#left-top button::after { content: ' +'; }";
-            }
-            else if (currentVW <= breakpointVW && prevVW > breakpointVW) {
-                navLeft.style.display = "none";
-                navRight.style.display = "none";
-                navHidden.style.display = "none";
-                buttonStyle = document.head.appendChild(document.createElement("style"));
-                buttonStyle.innerHTML = "div#menu-top button::after { content: ' ▾'; } nav#left-top button::after { content: ' +'; }";
-            }
-
-            prevVW = currentVW;
-        }
-    </script> -->
-    <!-- / -->
-
     <!-- Shows sticky nav when scrollup and hides when scroll down  -->
     <script type="text/javascript">
         var yPos = function() {
@@ -633,8 +646,9 @@
     <!-- / -->
 
     <!-- Shows/hides div#hidden-div when button "more" is clicked -->
+    <!-- Works only for big screens -->
     <script type="text/javascript">
-        function toggleDiv() {
+        function toggleBigHidden() {
             var hiddenDiv = document.getElementById("hidden");
             var styleElem = document.head.appendChild(document.createElement("style"));
 
@@ -650,28 +664,55 @@
     </script>
     <!-- / -->
 
-    <!-- Shows/hides top menu when button "menu" is clicked -->
-    <!-- <script type="text/javascript">
-        function toggleTopMenu() {
-            var navLeftTop = document.getElementById("left-top");
-            var navRightTop = document.getElementById("right-top");
-            var buttonMenuStyle = document.head.appendChild(document.createElement("style"));
+    <!-- Shows/hides div#hidden-div when button "menu" is clicked -->
+    <!-- Works only for small screens -->
+    <script type="text/javascript">
+        function toggleSmallHidden() {
+            var hiddenDiv = document.getElementById("hidden");
+            var styleElem = document.head.appendChild(document.createElement("style"));
 
-            if (navLeftTop.style.display == "block") {
-                navLeftTop.style.display = "none";
-                navRightTop.style.display = "none";
-                buttonMenuStyle.innerHTML = "div#menu-top button::after { content: ' ▾'; }";
-                toggleDiv();
+            if (hiddenDiv.style.display == "flex") {
+                hiddenDiv.style.display = "none";
+                styleElem.innerHTML = 'div#menu-top button::after {content: " ▾";}';
             }
             else {
-                navLeftTop.style.display = "block";
-                navRightTop.style.display = "block";
-                buttonMenuStyle.innerHTML = "div#menu-top button::after { content: ' ▴'; }";
-                toggleDiv();
+                hiddenDiv.style.display = "flex";
+                styleElem.innerHTML = 'div#menu-top button::after {content: " ▴";}';
             }
         }
-    </script> -->
+    </script>
     <!-- / -->
+
+    <!-- Fixes button::after content and closes menu when resizing -->
+    <script type="text/javascript">
+        var getVW = function() {
+            return window.innerWidth;
+        };
+
+        var prevVW = getVW();
+        var breakpointVW = 1024;
+
+        window.onresize = function() {
+            currentVW = getVW();
+
+            if (prevVW > breakpointVW && currentVW <= breakpointVW) {
+                var hiddenDiv = document.getElementById("hidden");
+                var styleElem = document.head.appendChild(document.createElement("style"));
+
+                hiddenDiv.style.display = "none";
+                styleElem.innerHTML = 'nav#left-top button::after {content: " +";}';
+            }
+            else if (prevVW <= breakpointVW && currentVW > breakpointVW) {
+                var hiddenDiv = document.getElementById("hidden");
+                var styleElem = document.head.appendChild(document.createElement("style"));
+
+                hiddenDiv.style.display = "none";
+                styleElem.innerHTML = 'div#menu-top button::after {content: " ▾";}';
+            }
+
+            prevVW = currentVW;
+        }
+    </script>
     <!-- / -->
 </body>
 
