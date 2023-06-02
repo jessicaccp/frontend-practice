@@ -70,7 +70,7 @@ div#logo-top p {
 }
 
 div#menu-top {
-   display: block;
+   display: none;
 }
 
 @media only screen and (max-width: 64rem) {
@@ -81,8 +81,8 @@ div#menu-top {
 
 div#menu-top button {
    cursor: pointer;
-   z-index: 9;
-   position: relative;
+   /* z-index: 9;
+   position: relative; */
 }
 
 div#menu-top button::after {
@@ -128,7 +128,7 @@ nav#left-top button {
    width: fit-content;
    height: fit-content;
    cursor: pointer;
-   z-index: 9;
+   /* z-index: 9; */
 }
 
 nav#left-top button::after {
