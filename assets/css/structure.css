@@ -70,7 +70,7 @@ div#logo-top p {
 }
 
 div#menu-top {
-   display: none;
+   display: block;
 }
 
 @media only screen and (max-width: 64rem) {
