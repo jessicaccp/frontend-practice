@@ -81,6 +81,7 @@ div#menu-top {
 
 div#menu-top button {
    cursor: pointer;
+   z-index: 9;
 }
 
 div#menu-top button::after {
@@ -125,6 +126,7 @@ nav#left-top button {
    width: fit-content;
    height: fit-content;
    cursor: pointer;
+   z-index: 9;
 }
 
 nav#left-top button::after {
